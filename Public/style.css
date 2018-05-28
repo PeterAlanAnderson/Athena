@@ -12,6 +12,9 @@ a:visited {
     text-decoration: none;
 }
 
+.material-icons {
+	color: #6e78a6
+}
 
 /*footers*/
  body {
