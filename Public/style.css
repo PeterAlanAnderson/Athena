@@ -1,8 +1,20 @@
+/*Main Content for every page*/
 
 
+a:link {
+    color: white; 
+    background-color: transparent; 
+    text-decoration: none;
+}
+a:visited {
+    color: white;
+    background-color: transparent;
+    text-decoration: none;
+}
 
-
-
+.material-icons {
+	color: #6e78a6
+}
 
 /*footers*/
  body {
@@ -14,4 +26,27 @@
   main {
     flex: 1 0 auto;
   }
+
+  /*index.html*/
+
+  .carousel .carousel-item>img {
+    width: 153%;
+}
       
+
+
+
+
+
+/*log-in page*/
+#logInSection {
+	border-style: solid;
+	border-width: 1px;
+	width: 50%;
+	margin-top: 5%;
+
+}
+
+
+
+
