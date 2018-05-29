@@ -17,7 +17,6 @@ a:visited {
 }
 
 
-
 /*footers*/
  body {
     display: flex;
@@ -34,7 +33,23 @@ a:visited {
   .carousel .carousel-item>img {
     width: 153%;
 }
-      
+
+
+/*Home Page*/
+
+
+.carousel .carousel-slider {
+	height: 407.656px;
+}
+
+.carousel .carousel-item>img {
+    width: 153%;
+    /* top: 7px; */
+    position: relative;
+    top: -377px;
+}
+
+
 
 
 
