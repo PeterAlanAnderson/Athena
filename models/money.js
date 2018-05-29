@@ -6,12 +6,12 @@ module.exports = (sequelize, DataTypes) => {
         },
         balance: {
             type: Datatypes.INTEGER,
-            allowNull: false, 
+            allowNull: false,
         }
     });
 
     Money.associate = (models) => {
-    
+
         Money.belongsTo(models.Customer, {
             foreignKey: {
                 allowNull: false

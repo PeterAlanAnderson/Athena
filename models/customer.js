@@ -1,5 +1,3 @@
-
-
 module.exports = (sequelize, DataTypes) => {
     var Customer = sequelize.define("Customer", {
         id: {
@@ -9,17 +7,17 @@ module.exports = (sequelize, DataTypes) => {
         },
         name: {
             type: Datatypes.STRING,
-            validate: len[1,75],
+            validate: len[1, 75],
             allowNull: false
         },
         username: {
             type: DataTypes.STRING,
-            validate: len[1,75],
+            validate: len[1, 75],
             allowNull: false
         },
         password: {
             type: DataTypes.STRING,
-            validate: len [1,20]
+            validate: len[1, 20]
         },
         vendor: {
             type: DataTypes.BOOLEAN,
@@ -27,7 +25,7 @@ module.exports = (sequelize, DataTypes) => {
         },
         storeName: {
             type: DataTypes.STRING,
-            validate: len [1,50]
+            validate: len[1, 50]
         },
         likedTags: {
             type: DataTypes.TEXT
@@ -35,7 +33,14 @@ module.exports = (sequelize, DataTypes) => {
 
     });
 
-    Customer.hasMany(Money, {foreignKey: 'vendorId'});
-    Customer.hasMany(PurchaseLog, {foreignKey: 'customerId'});
+    Customer.hasMany(Money, {
+        foreignKey: 'vendorId'
+    });
+    Customer.hasMany(PurchaseLog, {
+        foreignKey: 'customerId'
+    });
+    Customer.hasMany(Item, {
+        foreignKey: 'owner'
+    });
     return Customer;
 }
