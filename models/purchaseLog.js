@@ -20,10 +20,14 @@ module.exports = (sequelize, DataTypes) => {
     PurchaseLog.associate = (models) => {
     
         PurchaseLog.belongsToMany(models.Customer, {
-            foreignKey: 'customerId'
+            foreignKey: {
+                allowNull: false
+            }
         });
         PurchaseLog.belongsToMany(models.Item, {
-            foreignKey: 'itemId'
+            foreignKey: {
+                allowNull: false
+            }
         });
 
     };

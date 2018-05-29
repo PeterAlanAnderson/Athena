@@ -13,7 +13,9 @@ module.exports = (sequelize, DataTypes) => {
     Money.associate = (models) => {
     
         Money.belongsTo(models.Customer, {
-            foreignKey: 'vendorId'
+            foreignKey: {
+                allowNull: false
+            }
         });
     };
     return Money;
