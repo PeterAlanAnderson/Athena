@@ -58,7 +58,13 @@ a:visited {
 
   .carousel .carousel-item>img {
     width: 153%;
-}
+  }
+
+  .card-title {
+    text-shadow: 2px 2px 18px #000000;
+  }
+
+
 
 
 /*Home Page*/
