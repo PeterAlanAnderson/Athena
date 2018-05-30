@@ -62,10 +62,10 @@ module.exports = function(app){
 
     //GET items that match
     // ********************** YA STILL NEED TO DO THIS ONE PETE
-    app.get()
+    // app.get()
 
     //UPDATE item (reduce quantity for sale?)
-    app.update("/api/item", function(req, res){
+    app.put("/api/item", function(req, res){
         db.Item.update({
             quantity: req.body.quantity
         },{
@@ -78,7 +78,7 @@ module.exports = function(app){
     })
 
     //CREATE purchaseLog
-    app.create("/api/purchaseLog", function(req, res){
+    app.post("/api/purchaseLog", function(req, res){
         db.PurchaseLog.create({
             purchaseId: req.body.purchaseId,
             itemId: req.body.itemId,
@@ -98,7 +98,7 @@ module.exports = function(app){
     })
 
     //POST a new balance
-    app.create("/api/money", function(req, res){
+    app.post("/api/money", function(req, res){
         db.Money.create({
             vendorId: req.body.vendorId,
             balance: 0
@@ -106,7 +106,7 @@ module.exports = function(app){
     })
 
     //UPDATE money for a vendor
-    app.update("/api/money", function(req, res){
+    app.post("/api/money", function(req, res){
         db.Money.update({
             balance: req.body.balance
         },{
