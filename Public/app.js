@@ -1,6 +1,12 @@
 $(document).ready(function () {
   $('.carousel').carousel();
   $('.modal').modal();
+  $('.carousel.carousel-slider').carousel({
+    fullWidth: true,
+    indicators: true,
+    duration: 300
+  });
+   $('.sidenav').sidenav();
 
   //check local storage for email and password
   var currentEmail = localStorage.getItem("email")
@@ -22,9 +28,12 @@ $(document).ready(function () {
 
   $featuredItemDiv = $("#featuredItems");
 
+
+
   // Our initial top sellers and featured items arrays
   var topSellingItem = [];
   var featuredItem = [];
+
 
   // Getting top selling from database when page loads
   getTopSelling();

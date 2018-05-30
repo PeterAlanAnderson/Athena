@@ -1,7 +1,9 @@
 <!DOCTYPE html>
 <html>
 <head>
-	<title></title>
+	<title>Athena | A wise place to shop</title>
+	<link href="https://fonts.googleapis.com/css?family=Nanum+Gothic" rel="stylesheet">
+	<link href="https://fonts.googleapis.com/css?family=Josefin+Sans:300i" rel="stylesheet">
 	<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
 	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0-beta/css/materialize.min.css">
 	<link rel="stylesheet" href="style.css">
@@ -10,21 +12,24 @@
 
 <main class="container-fluid">
 	<div class="center-align">
-		<h1>Athena</h1>
+		<h1>ATHENA</h1>
+		<i>a wise place to shop.</i>
 	</div>
 
 	<nav>
 	    <div class="nav-wrapper #eceff1 blue-grey lighten-5">
+	    	<a href="#" data-target="mobile-demo" class="sidenav-trigger"><i class="material-icons">menu</i></a>
 	     <ul>
 	      <li>
 	      	<form>
 		        <div class="input-field">
-		          <input id="search" type="search" required>
+		          <input id="search" placeholder="Search" type="search" required>
 		          <label class="label-icon" for="search"><i class="material-icons">search</i></label>
-		          <i class="material-icons">close</i>
+		          <i class="material-icons ">close</i>
 		        </div>
-		     </form>
-		    </li>
+			    </li>
+			    <li><button class="btn #7986cb indigo lighten-2">Search</button></li>
+		    </form>
 		</ul>	
 	      <ul id="nav-mobile" class="right hide-on-med-and-down">
 	        <li><a href="index.html"><i class="large material-icons left">home</i></a></li>
@@ -32,30 +37,74 @@
 	      	<li><a class="modal-trigger" data-target="modal1" href="#"><i class="large material-icons left">shopping_cart</i></a></li>
 	      </ul>
 	    </div>
-
   	</nav>
+
+
+<ul class="sidenav" id="mobile-demo">
+    <li><a href="index.html">Home</a></li>
+    
+	<li><a href="#">Account</a></li>
+	<li><a href="login.html">Log In</a></li>
+	<li><a class="modal-trigger" data-target="modal1" href="#">Cart</a></li>
+  </ul>
+          
+
 <section>
 	<h2>Featured Items</h2>
 	<br>
-	<div class="carousel">
-	    <a class="carousel-item" href="#one!"><img src="https://lorempixel.com/250/250/nature/1"></a>
-	    <a class="carousel-item" href="#two!"><img src="https://lorempixel.com/250/250/nature/2"></a>
-	    <a class="carousel-item" href="#three!"><img src="https://lorempixel.com/250/250/nature/3"></a>
-	    <a class="carousel-item" href="#four!"><img src="https://lorempixel.com/250/250/nature/4"></a>
-	    <a class="carousel-item" href="#five!"><img src="https://lorempixel.com/250/250/nature/5"></a>
+	<div class="carousel carousel-slider center">
+    <div class="carousel-fixed-item center">
+    </div>
+    <div class="carousel-item white-text" href="#one!">
+    	<img src="./assets/Stock_Photos/owen-spencer-490792-unsplash.jpg" >
+    </div>
+    <div class="carousel-item white-text" href="#two!">
+      <img src="./assets/Stock_Photos/oc-gonzalez-547887-unsplash.jpg">
+    </div>
+    <div class="carousel-item white-text" href="#three!">
+      <img src="./assets/Stock_Photos/joshua-fuller-609239-unsplash.jpg">
+    </div>
+    <div class="carousel-item white-text" href="#four!">
+      <img src="./assets/Stock_Photos/clark-street-mercantile-33931-unsplash.jpg">
+    </div>
+    <div class="carousel-item white-text" href="#five!">
+      <img src="./assets/Stock_Photos/dhaval-parmar-531583-unsplash.jpg">
+    </div>
   </div>
 </section>
+<br>
+<br>
 
-<section>
-	<h2>Top Selling Items</h2>
-	<div class="carousel">
-	    <a class="carousel-item" href="#one!"><img src="https://lorempixel.com/250/250/nature/1"></a>
-	    <a class="carousel-item" href="#two!"><img src="https://lorempixel.com/250/250/nature/2"></a>
-	    <a class="carousel-item" href="#three!"><img src="https://lorempixel.com/250/250/nature/3"></a>
-	    <a class="carousel-item" href="#four!"><img src="https://lorempixel.com/250/250/nature/4"></a>
-	    <a class="carousel-item" href="#five!"><img src="https://lorempixel.com/250/250/nature/5"></a>
+<section id="card-section">
+	<div class="row">
+	    <div class="col s12 m6">
+	      <div class="card large">
+	        <div class="card-content">
+	          <p>I am a very simple card. I am good at containing small bits of information. I am convenient because I require little markup to use effectivelyExercitation id ut reprehenderit deserunt id incididunt consectetur elit cillum elit non. Exercitation qui sint reprehenderit irure ut do esse anim labore ad dolore mollit duis nostrud ea sint velit dolor ex occaecat sint duis commodo ullamco..deserunt id incididunt consectetur elit cillum elit non. Exercitation qui sint reprehenderit irure ut do esse anim labore ad dolore mollit duis nostrud ea sint velit dolor ex occaecat sint duis commodo ullamco..sint velit dolor ex occaecat sint duis commodo ullamco..deserunt id incididunt consectetur elit cillum elit non. Exercitation qui sint reprehenderit irure ut do esse anim labore ad dolore mollit duis nostrud ea sint velit dolor ex occaecat sint duis commodo ullamco.sint velit dolor ex occaecat sint duis commodo ullamco..deserunt id incididunt consectetur elit cillum elit non. Exercitation qui sint reprehenderit irure ut do esse anim labore ad dolore mollit duis nostrud ea sint velit dolor ex occaecat sint duis commodo ullamco.
+	          elit non. Exercitation qui sint reprehenderit irure ut do esse anim labore ad dolore mollit duis nostrud ea sint velit dolor ex occaecat sint duis commodo ullamco.sint velit dolor ex occaecat sint duis commodo ullamco..deserunt id incididunt consectetur elit cillum elit non. Exercitation qui sint reprehenderit irure ut do esse anim labore ad dolore mollit duis nostrud ea sint velit dolor ex occaecat sint duis commodo ullamco.</p>
+	        </div>
+	      </div>
+	    </div>
+
+	    <div class="col s12 m6">
+	      <div class="card">
+	        <div class="card-image">
+	          <img src="./assets/Stock_Photos/benjamin-hung-340383-unsplash.jpg">
+	          <span class="card-title">Discover one of kind items from around the world</span>
+	          <a class="btn-floating halfway-fab waves-effect waves-light red"><i class="material-icons">add</i></a>
+	        </div>
+	      </div>
+	    </div>
+	    <div class="col s12 m6">
+	      <div class="card">
+	        <div class="card-image">
+	          <img src="./assets/Stock_Photos//angelina-litvin-32201-unsplash.jpg">
+	          <span class="card-title">Perfect Gifts for under $100</span>
+	          <a class="btn-floating halfway-fab waves-effect waves-light red"><i class="material-icons">add</i></a>
+	        </div>
+	      </div>
+	    </div>
   </div>
-
 </section>
 
 
