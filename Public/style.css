@@ -51,6 +51,10 @@ a:visited {
 	height: 407.656px;
 }
 
+#card-section {
+  padding-top: 2%;
+}
+
 .carousel .carousel-item>img {
     width: 100%;
 /*    top: 7px;
