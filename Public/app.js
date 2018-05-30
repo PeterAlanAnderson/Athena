@@ -12,6 +12,7 @@
     indicators: true,
     duration: 300
   });
+    $('.sidenav').sidenav();
 
 
   });

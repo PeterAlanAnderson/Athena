@@ -1,6 +1,15 @@
 /*Main Content for every page*/
 
 
+
+h1 {
+	font-family: 'Nanum Gothic', sans-serif;
+}
+
+p {
+	font-family: 'Josefin Sans', sans-serif;
+}
+
 a:link {
     color: white; 
     background-color: transparent; 
@@ -43,12 +52,11 @@ a:visited {
 }
 
 .carousel .carousel-item>img {
-    width: 153%;
-    /* top: 7px; */
-    position: relative;
-    top: -377px;
-}
-
+    width: 100%;
+/*    top: 7px;
+*/    position: relative;
+/*    top: -86px;
+*/}
 
 
 
