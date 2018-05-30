@@ -6,8 +6,8 @@ module.exports = (sequelize, DataTypes) => {
             primaryKey: true
         },
         purchaseID: {
-            type: DataTypes.INTEGER,
-            autoIncrement: true
+            type: DataTypes.INTEGER
+            // ,autoIncrement: true
         },
         quantity: {
             type: DataTypes.INTEGER
@@ -22,12 +22,14 @@ module.exports = (sequelize, DataTypes) => {
         PurchaseLog.belongsToMany(models.Customer, {
             foreignKey: {
                 allowNull: false
-            }
+            },
+            through: 'purchaseLogCustomer'
         });
         PurchaseLog.belongsToMany(models.Item, {
             foreignKey: {
                 allowNull: false
-            }
+            },
+            through: 'purchaseLogItem'
         });
 
     };

@@ -32,15 +32,17 @@ module.exports = (sequelize, DataTypes) => {
         }
 
     });
+    Customer.associate = (models) => {
 
-    Customer.hasMany(Money, {
-        foreignKey: 'vendorId'
-    });
-    Customer.hasMany(PurchaseLog, {
-        foreignKey: 'customerId'
-    });
-    Customer.hasMany(Item, {
-        foreignKey: 'owner'
-    });
+        Customer.hasMany(models.Money, {
+            foreignKey: 'vendorId'
+        });
+        Customer.hasMany(models.PurchaseLog, {
+            foreignKey: 'customerId'
+        });
+        Customer.hasMany(models.Item, {
+            foreignKey: 'owner'
+        });
+    }
     return Customer;
 }
