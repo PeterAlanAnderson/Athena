@@ -4,10 +4,21 @@
 
 h1 {
 	font-family: 'Nanum Gothic', sans-serif;
+  font-size: 5.2rem;
+  line-height: 32%;
+  margin: 2.8rem 0 1.68rem 0;
 }
 
 p {
 	font-family: 'Josefin Sans', sans-serif;
+}
+
+i {
+  padding-top: -10px;
+}
+
+nav {
+  margin-top: 1%;
 }
 
 a:link {
@@ -36,6 +47,12 @@ a:visited {
   main {
     flex: 1 0 auto;
   }
+
+
+
+
+
+
 
   /*index.html*/
 
