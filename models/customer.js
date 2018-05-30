@@ -6,18 +6,18 @@ module.exports = (sequelize, DataTypes) => {
             primaryKey: true
         },
         name: {
-            type: Datatypes.STRING,
-            validate: len[1, 75],
+            type: DataTypes.STRING,
+            validate: {len: [1, 75]},
             allowNull: false
         },
         username: {
             type: DataTypes.STRING,
-            validate: len[1, 75],
+            validate: {len:[1, 75]},
             allowNull: false
         },
         password: {
             type: DataTypes.STRING,
-            validate: len[1, 20]
+            validate: {len:[1, 20]}
         },
         vendor: {
             type: DataTypes.BOOLEAN,
@@ -25,7 +25,7 @@ module.exports = (sequelize, DataTypes) => {
         },
         storeName: {
             type: DataTypes.STRING,
-            validate: len[1, 50]
+            validate: {len:[1, 50]}
         },
         likedTags: {
             type: DataTypes.TEXT

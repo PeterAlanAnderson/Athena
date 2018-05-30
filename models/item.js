@@ -8,19 +8,19 @@ module.exports = (sequelize, DataTypes) => {
         name: {
             type: DataTypes.STRING,
             allowNull: false, 
-            validate: len[1,50]
+            validate: {len:[1,50]}
         },
         description: {
             type: DataTypes.STRING,
             allowNull: false,
-            validate: len[1,300]
+            validate: {len:[1,300]}
         },
         quantity: {
             type: DataTypes.INTEGER,
             allowNull: false
         },
         auction: {
-            type: Datatypes.BOOLEAN
+            type: DataTypes.BOOLEAN
         },
         price: {
             type: DataTypes.DECIMAL,

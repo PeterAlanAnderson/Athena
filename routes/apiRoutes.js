@@ -43,8 +43,10 @@ module.exports = function(app){
             auction: false,
             owner: req.body.owner,
             price: req.body.price,
-            imageUrl: req.body.imageUrl,
+            image: req.body.image,
             category: req.body.category,
+            featured: false,
+            totalSold: 0,
             tags: req.body.tags
         }).then(function(result){
             res.json(result)

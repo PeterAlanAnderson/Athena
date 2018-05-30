@@ -1,11 +1,11 @@
 module.exports = (sequelize, DataTypes) => {
     var Money = sequelize.define("Money", {
         vendorId: {
-            type: Datatypes.INTEGER,
+            type: DataTypes.INTEGER,
             primaryKey: true,
         },
         balance: {
-            type: Datatypes.INTEGER,
+            type: DataTypes.INTEGER,
             allowNull: false,
         }
     });
