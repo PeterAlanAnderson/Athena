@@ -1,17 +1,21 @@
 /*Main Content for every page*/
 
 h1 {
-	font-family: 'Nanum Gothic', sans-serif;
-  font-size: 5.2rem;
-  line-height: 32%;
-  margin: 2.8rem 0 1.68rem 0;
+    font-family: 'Nanum Gothic', sans-serif;
+    font-size: 5.2rem;
+    line-height: 32%;
+    margin: 2.8rem 0 1.68rem 0;
+    color: white;
+    text-align: left;
+    padding-left: 6%;
 }
 
-.foo {
-  background-image: url('/assets/Stock_Photos/mauricio-artieda-453995-unsplash.jpg');
-  padding-top: 1px;
-  /* background-size: cover; */
-  /* background-size: 100%;  */
+#headerImage {
+    background-image: url(/assets/Stock_Photos/lars-663621-unsplash.jpg);
+    padding-top: 1px;
+    background-size: 154%;
+    background-position: top left;
+    background-position: bottom 8% right 99%;
 }
 
 p {
