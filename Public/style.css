@@ -72,6 +72,14 @@ a:visited {
 
   /*index.html*/
 
+  .carouselText {
+    position: absolute;
+    top: 2%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+
+  }
+
   .carousel .carousel-item>img {
     width: 153%;
   }
