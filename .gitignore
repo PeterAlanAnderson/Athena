@@ -65,4 +65,7 @@ config/config.json
 # luke's test to have this as a gitignore
 config/config.json/
 
+# another test - luke
+config/
+
 
