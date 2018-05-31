@@ -1,4 +1,7 @@
 $(document).ready(function () {
+
+
+
   $('.carousel').carousel();
   $('.modal').modal();
   $('.carousel.carousel-slider').carousel({
@@ -7,6 +10,7 @@ $(document).ready(function () {
     duration: 300
   });
    $('.sidenav').sidenav();
+   $('.dropdown-trigger').dropdown();
 
   //check local storage for email and password
   var currentEmail = localStorage.getItem("email")
