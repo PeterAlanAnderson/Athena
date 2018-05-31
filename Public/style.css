@@ -18,6 +18,10 @@ h1 {
     background-position: bottom 8% right 99%;
 }
 
+.headerStyle {
+  padding-bottom: 3%;
+}
+
 p {
 	font-family: 'Josefin Sans', sans-serif;
 }
@@ -30,7 +34,7 @@ i {
 }
 
 nav {
-  margin-top: 1%;
+ /* margin-top: 1%;*/
 }
 
 a:link {
