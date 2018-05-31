@@ -39,7 +39,8 @@ module.exports = function (app) {
             password: req.body.passoword,
             vendor: req.body.vendor,
             storeName: req.body.storeName,
-            likedTags: req.body.likedTags
+            likedTags: req.body.likedTags,
+            balance: 0
         }).then(function (result) {
             res.json(result)
         })
@@ -87,7 +88,7 @@ module.exports = function (app) {
         });
     });
 
-    // Get all featured items 
+    // Get all featured items
     app.get("/api/items/featured", function (req, res) {
         db.Item.findAll({
             where: {
@@ -138,35 +139,5 @@ module.exports = function (app) {
         })
     })
 
-    //POST a new balance
-    app.post("/api/money", function (req, res) {
-        db.Money.create({
-            vendorId: req.body.vendorId,
-            balance: 0
-        })
-    })
 
-    //UPDATE money for a vendor
-    app.post("/api/money", function (req, res) {
-        db.Money.update({
-            balance: req.body.balance
-        }, {
-            where: {
-                id: req.body.id
-            }
-        }).then(function (result) {
-            res.json(result)
-        })
-    })
-
-    //GET money for a vendor
-    app.get("/api/money", function (req, res) {
-        db.Money.findOne({
-            where: {
-                vendorId: req.body.vendorId
-            }
-        }).then(function (result) {
-            res.json(result)
-        })
-    })
 }
