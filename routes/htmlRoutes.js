@@ -6,16 +6,18 @@ module.exports = function(app) {
       res.render("index");
   });
 
+
   app.get("/login", function(req, res) {
     res.render("login");
+
   });
 
   app.get("/userPage", function(req, res) {
-    res.sendFile(path.join(__dirname, "../public/userPage.html"));
+    res.sendFile(path.join(__dirname, "../Public/userPage.html"));
   });
 
   app.get("/itemPage", function(req, res) {
-    res.sendFile(path.join(__dirname, "../public/itemPage.html"));
+    res.sendFile(path.join(__dirname, "../Public/itemPage.html"));
   });
 
 };
