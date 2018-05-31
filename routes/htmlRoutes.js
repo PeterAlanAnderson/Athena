@@ -13,7 +13,7 @@ module.exports = function(app) {
   });
 
   app.get("/userPage", function(req, res) {
-    res.sendFile(path.join(__dirname, "../Public/userPage.html"));
+    res.render("user");
   });
 
   app.get("/itemPage", function(req, res) {
