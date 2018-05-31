@@ -1,0 +1,70 @@
+<div class="section">
+    <div class="container">
+        <div>
+        <h2 class="center-align">{{user}}</h2>
+        </div>
+        <div class="row">
+            <div class="col s4">
+                <div class="card-image">
+                    <img src={{user.image}} width="100%">
+                </div>
+            </div>
+            <div class="col s4">
+                <div class="card blue-grey lighten-4">
+                    <div class="card-content">
+                        <h6 id="name">Name: </h5>
+                        <h6 id="username">Username:</h6>
+                        <h6 id="address">Address:</h6>
+                        <h6 id="email">Email:</h6>
+                    </div>
+                </div>
+            </div>
+            <div class="col s4">
+                <div class="card blue-grey lighten-4">
+                    <div class="card-content">
+                        <h6 id="vendor">--vendor-- </h6>
+                        <h6 id="vendor">Items for sale: </h6>
+                        <h6 id="revenue">Total revenue: </h6>
+                        <button id="newVendor">Become a vendor</button>
+                        <button id="newItem"><a class="modal-trigger" data-target="modal2" href="#">New Item</a></button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+{{!-- MODAL --}}
+<div id="modal2" class="modal">
+    <div class="modal-content">
+
+                <h4 class="center">New Item</h4>
+                <br><br>
+                <form class="container col s6 center">
+                    <div class="input-field">
+                        <input id="itemName" type="text" class="validate">
+                        <label for="itemName">Item name:</label>
+                    </div>
+                    <div class="input-field ">
+                        <input id="itemDescription" type="text" class="validate">
+                        <label for="itemDescription">Item description: </label>
+                    </div>
+                    <div class="input-field col s10 center-align">
+                        <input id="price" type="text" class="validate">
+                        <label for="price">Price:</label>
+                    </div>
+                    <div class="input-field col s10 center-align">
+                        <input id="itemPhoto" type="password" class="validate">
+                        <label for="itemPhoto">Photo:</label>
+                    </div>
+                </form>
+                <button class="btn #7986cb indigo lighten-2" id="submit">Add Item
+                    <i class="material-icons right"></i>
+                </button>
+            </div>
+        </div>
+    </section>
+    <div class="modal-footer">
+        <a href="#!" class="modal-close waves-effect waves-green btn-flat">Agree</a>
+    </div>
+</div>
