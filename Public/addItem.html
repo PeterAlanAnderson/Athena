@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0-beta/css/materialize.min.css">
+	<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<main class="container-fluid">
+	<div class="center-align">
+		<h1>Athena</h1>
+	</div>
+	<nav>
+	    <div class="nav-wrapper">
+	        <a href="#" class="brand-logo right">Logo</a>
+	        <ul id="nav-mobile" class="left hide-on-med-and-down">
+                <li><a href="sass.html">Sass</a></li>
+                <li><a href="badges.html">Components</a></li>
+                <li><a href="collapsible.html">JavaScript</a></li>
+                <li>
+                            <form>
+                                <div class="input-field">
+                                    <input id="search" type="search" required>
+                                    <label class="label-icon" for="search"><i class="material-icons">search</i></label>
+                                    <i class="material-icons">close</i>
+                                </div>
+                            </form>
+                </li>
+	        </ul>
+	    </div>
+    </nav>
+    <section>
+        <div class="container">
+            <div class="card-panel z-depth-5" id="enterinfo">
+                <h4 class="center">New Item</h4>
+                <br><br>
+                <form class="container col s6 center">
+                    <div class="input-field">
+                        <input id="itemName" type="text" class="validate">
+                        <label for="itemName">Item name:</label>
+                    </div>
+                    <div class="input-field ">
+                        <input id="itemDescription" type="text" class="validate">
+                        <label for="itemDescription">Item description: </label>
+                    </div>
+                    <div class="input-field col s10 center-align">
+                        <input id="price" type="text" class="validate">
+                        <label for="price">Price:</label>
+                    </div>
+                    <div class="input-field col s10 center-align">
+                        <input id="itemPhoto" type="password" class="validate">
+                        <label for="itemPhoto">Photo:</label>
+                    </div>
+                </form>
+                <button class="btn blue waves-effect waves-light" id="submit">Add Item
+                    <i class="material-icons right"></i>
+                </button>
+            </div>
+        </div>
+    </section>
+
+
+
+</main>
+<footer class="page-footer">
+    <div class="footer-copyright">
+        <div class="container">
+            © 2014 Copyright Text
+            <a class="grey-text text-lighten-4 right" href="#!">More Links</a>
+        </div>
+    </div>
+</footer>
+
+
+
+
+<script src="https://code.jquery.com/jquery-3.3.1.js" integrity="sha256-2Kok7MbOyxpgUVvAk/HJ2jigOSYS2auK4Pfzbm7uH60=" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0-beta/js/materialize.min.js"></script>
+<script src="app.js"></script>
+</body>
+</html>
