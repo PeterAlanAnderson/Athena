@@ -20,4 +20,8 @@ module.exports = function(app) {
     res.sendFile(path.join(__dirname, "../Public/itemPage.html"));
   });
 
+  app.get("/addItem", function(req, res) {
+    res.render("addItem");
+  });
+
 };
