@@ -29,20 +29,19 @@ module.exports = (sequelize, DataTypes) => {
         },
         likedTags: {
             type: DataTypes.TEXT
+        },
+        balance: {
+            type: DataTypes.FLOAT,
+            allowNull: false,
         }
 
     });
-    Customer.associate = (models) => {
+    // Customer.associate = (models) => {
 
-        Customer.hasMany(models.Money, {
-            foreignKey: 'vendorId'
-        });
-        Customer.hasMany(models.PurchaseLog, {
-            foreignKey: 'customerId'
-        });
-        Customer.hasMany(models.Item, {
-            foreignKey: 'owner'
-        });
-    }
+    //     Customer.belongsToMany(models.Item, {
+    //         foreignKey: 'customerId',
+    //         through: models.PurchaseLog
+    //     });
+    // }
     return Customer;
 }

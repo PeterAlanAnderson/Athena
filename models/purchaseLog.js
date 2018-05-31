@@ -1,6 +1,6 @@
 module.exports = (sequelize, DataTypes) => {
     var PurchaseLog = sequelize.define("PurchaseLog", {
-        transactionId: {
+        id: {
             type: DataTypes.INTEGER,
             autoIncrement: true,
             primaryKey: true
@@ -19,19 +19,14 @@ module.exports = (sequelize, DataTypes) => {
 
     PurchaseLog.associate = (models) => {
 
-        PurchaseLog.belongsToMany(models.Customer, {
-            foreignKey: {
-                allowNull: false
-            },
-            through: 'purchaseLogCustomer'
-        });
-        PurchaseLog.belongsToMany(models.Item, {
-            foreignKey: {
-                allowNull: false
-            },
-            through: 'purchaseLogItem'
-        });
-
+        // Item.hasOne(models.PurchaseLog, {
+        //     foreignKey: 'itemId'
+        // });
+        PurchaseLog.belongsTo(models.Item, {
+            foreignKey: 'itemId'
+            // through: models.PurchaseLog
+        })
     };
+
     return PurchaseLog;
 }
