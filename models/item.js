@@ -48,13 +48,12 @@ module.exports = (sequelize, DataTypes) => {
 
     Item.associate = (models) => {
 
-        Item.hasOne(models.PurchaseLog, {
-            foreignKey: 'itemId'
-        });
+        // Item.hasOne(models.PurchaseLog, {
+        //     foreignKey: 'itemId'
+        // });
         Item.belongsTo(models.Customer, {
-            foreignKey: {
-                allowNull: false
-            }
+            foreignKey: 'owner'
+            // through: models.PurchaseLog
         })
     };
     return Item;
