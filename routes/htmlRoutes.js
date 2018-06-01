@@ -28,4 +28,8 @@ module.exports = function(app) {
     res.render("checkout");
   });
 
+  app.get("/search", function(req, res) {
+    res.render("search");
+  });
+
 };

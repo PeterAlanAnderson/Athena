@@ -87,13 +87,13 @@ a:visited {
 
 
 /*footers*/
- body {
+.body {
     display: flex;
     min-height: 100vh;
     flex-direction: column;
   }
 
-  main {
+.main {
     flex: 1 0 auto;
   }
 
@@ -141,7 +141,24 @@ a:visited {
   */    position: relative;
   /*    top: -86px;
   */}
+
+  /* search page */
+.itemsCard {
+  margin: 2%;
+  background-color: #f5f5f5;
 }
+
+a:link .addInfo {
+  color: #9fa8da; 
+  background-color: transparent; 
+  text-decoration: none;
+}
+a:visited {
+  color: #6f79a8;
+  background-color: transparent;
+  text-decoration: none;
+}
+
 
 
 
