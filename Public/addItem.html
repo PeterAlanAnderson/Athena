@@ -35,27 +35,27 @@
             <div class="card-panel z-depth-5" id="enterinfo">
                 <h4 class="center">New Item</h4>
                 <br><br>
-                <form class="container col s6 center">
+                <form class="container col s6 center" id = "addItemForm">
                     <div class="input-field">
-                        <input id="itemName" type="text" class="validate">
+                        <input id="itemName" type="text" >
                         <label for="itemName">Item name:</label>
                     </div>
                     <div class="input-field ">
-                        <input id="itemDescription" type="text" class="validate">
+                        <input id="itemDescription" type="text" >
                         <label for="itemDescription">Item description: </label>
                     </div>
                     <div class="input-field col s10 center-align">
-                        <input id="price" type="text" class="validate">
+                        <input id="price" type="text" >
                         <label for="price">Price:</label>
                     </div>
                     <div class="input-field col s10 center-align">
-                        <input id="itemPhoto" type="password" class="validate">
+                        <input id="itemPhoto" type="text">
                         <label for="itemPhoto">Photo:</label>
                     </div>
+                    <button class="btn blue waves-effect waves-light" id="submit">Add Item
+                        <i class="material-icons right"></i>
+                    </button>
                 </form>
-                <button class="btn blue waves-effect waves-light" id="submit">Add Item
-                    <i class="material-icons right"></i>
-                </button>
             </div>
         </div>
     </section>
@@ -77,6 +77,6 @@
 
 <script src="https://code.jquery.com/jquery-3.3.1.js" integrity="sha256-2Kok7MbOyxpgUVvAk/HJ2jigOSYS2auK4Pfzbm7uH60=" crossorigin="anonymous"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0-beta/js/materialize.min.js"></script>
-<script src="app.js"></script>
+<script src="addItem.js"></script>
 </body>
 </html>

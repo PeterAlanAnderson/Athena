@@ -24,4 +24,8 @@ module.exports = function(app) {
     res.render("addItem");
   });
 
+  app.get("/checkout", function(req, res) {
+    res.render("checkout");
+  });
+
 };
