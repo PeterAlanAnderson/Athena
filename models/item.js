@@ -32,7 +32,7 @@ module.exports = (sequelize, DataTypes) => {
         },
         category: {
             type: DataTypes.STRING,
-            allowNull: false
+            allowNull: true
         },
         featured: {
             type: DataTypes.BOOLEAN
