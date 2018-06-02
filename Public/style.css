@@ -161,19 +161,12 @@ a:visited {
 
 
 .carousel .carousel-slider {
-	height: 407.656px;
-}
+/*	height: 407.656px;
+*/}
 
 #card-section {
   padding-top: 2%;
 }
-
-.carousel .carousel-item>img {
-/*  width: 100%;
-*/  /*    top: 7px;
-  */    /*position: relative;*/
-  /*    top: -86px;
-  */}
 
 
   h2.carouselText {
