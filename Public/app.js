@@ -1,7 +1,4 @@
 $(document).ready(function () {
-
-
-
   $('.carousel').carousel();
   $('.modal').modal();
   $('.carousel.carousel-slider').carousel({
@@ -11,7 +8,4 @@ $(document).ready(function () {
   });
    $('.sidenav').sidenav();
    $('.dropdown-trigger').dropdown();
-
- 
-
 });
