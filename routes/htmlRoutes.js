@@ -32,8 +32,4 @@ module.exports = function(app) {
     res.render("search");
   });
 
-  app.get("/createUser", function(req, res) {
-    res.render("createUser");
-  });
-
 };
