@@ -35,9 +35,11 @@ module.exports = function(app) {
   app.get("/allItems", function(req, res) {
     res.render("allItems");
 
+  });
+
   app.get("/createUser", function(req, res) {
     res.render("createUser");
-
   });
 
 };
+
