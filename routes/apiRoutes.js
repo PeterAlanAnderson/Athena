@@ -3,7 +3,7 @@ var db = require("../models")
 module.exports = function (app) {
 
 //login api
-    app.post("/api/login", function(req, res){
+    app.patch("/api/login", function(req, res){
       console.log(req.body)
       db.Customer.findOne({
         where:{
@@ -13,10 +13,13 @@ module.exports = function (app) {
         console.log(data)
         if (data.password == req.body.pwdin){
           console.log("match password")
-          res.render("user")
+          // res.render("user")
+          res.json(data)
         } else {
           console.log("mismatch password")
-          return
+          // res.render("user", user)
+          // return
+          res.json(data)
         }
       })
     })
