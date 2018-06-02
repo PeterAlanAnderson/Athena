@@ -1,36 +1,35 @@
-
 var itemQuant;
 var oldQuant;
+const localStorageItems = [];
+
+$(document).ready(function () {
+
+function checkCart () {
+    localStorageItems.push(JSON.parse(localStorage.getItem('shoppingCart')));
+}
 
 $("#addToCart").on("click", function(event) {
     event.preventDefault();
-    var id = $(this).data("id")
-    var itemToCart = {
-        item: items
-    };
-    $.ajax("api/items/" + id, {
-        type: "GET",
-        data: items
-    }).then( function(data) {
+    var id = $(this).data("id");
+    console.log(id);
+
+    $.get("/api/items/" + id, function(data) {
         console.log(data);
-        localStorage.setItem('itemToCart', JSON.stringify(data));
-        $("#total").TEXT(data.price * itemQuant);
-        oldQuant = data.quantity
-        res.render("main", data)
+        localStorageItems.push(data);
+        console.log(localStorageItems);
+        var stringifiedArray = [];
+        function stringify(){
+            for (i = 0; i < localStorageItems.length; i++){
+                stringifiedArray.push(JSON.stringify(localStorageItems[i]));
+            }
+        };
+        localStorage.setItem('shoppingCart', stringifiedArray);
+
+        res.render("main", data);
     })
 });
+})
 
-// $("#placeOrder").on("click", function (event){
-//     event.preventDefault();
-//     var id = $(this).data("id")
-//     var retrievedItem = JSON.parse(localStorage.getItem('itemToCart'));
-//     var newQuant = oldQuant - itemQuant
-//     $.ajax("/api/item/"+id, {
-//         type: "PUT",
-//         data: newQuant
-//     }).then(function(res){
-//         console.log("quantity updated");
-//         res.render('checkout', retrievedItem);
-//         alert("Your shipment is being prepared!")
-//     }) 
-// });
+// ************************************************************************************************************
+// ************************************************************************************************************
+// ************************************************************************************************************

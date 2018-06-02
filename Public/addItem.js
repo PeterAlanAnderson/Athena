@@ -30,7 +30,7 @@ $(document).ready(function () {
         itemQuantity = ($("#quantity").val().trim());
         itemPrice = ($("#price").val().trim());
         itemUrl = ($("#itemPhoto").val().trim());
-        userEmail = localStorage.getItem("email");
+        // userEmail = localStorage.getItem("email");
 
 
         var newItem = {
@@ -39,7 +39,7 @@ $(document).ready(function () {
             quantity: itemQuantity,
             price: itemPrice,
             image: itemUrl,
-            email: userEmail,
+            // email: userEmail,
             //this needs to be linked to the owner/currently logged in user
            
             // need to either add code for this or inputs on the form to be able to add to a new item.  
@@ -60,10 +60,10 @@ $(document).ready(function () {
     });
 
     function itemReset() {
-        ($("#itemName").val(''));
-        ($("#itemDescription").val(''));
-        ($("#price").val(''));
-        ($("#quantity").val(''));
-        ($("#itemPhoto").val(''));
+        // ($("#itemName").val(''));
+        // ($("#itemDescription").val(''));
+        // ($("#price").val(''));
+        // ($("#quantity").val(''));
+        // ($("#itemPhoto").val(''));
     }
 });
