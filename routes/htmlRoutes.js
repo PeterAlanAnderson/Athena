@@ -32,4 +32,14 @@ module.exports = function(app) {
     res.render("search");
   });
 
+
+  app.get("/allItems", function(req, res) {
+    res.render("allItems");
+  });
+
+  app.get("/createUser", function(req, res) {
+    res.render("createUser");
+  });
+
 };
+

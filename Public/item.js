@@ -1,3 +1,4 @@
+
 module.exports = (sequelize, DataTypes) => {
     var Item = sequelize.define("Item", {
         id: {
@@ -58,3 +59,4 @@ module.exports = (sequelize, DataTypes) => {
     };
     return Item;
 }
+
