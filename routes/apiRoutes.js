@@ -2,6 +2,23 @@ var db = require("../models")
 
 module.exports = function (app) {
 
+//login api
+    app.get("/api/login", function(req, res){
+      console.log(req.body)
+      db.Customer.findOne({
+        where:{
+          username: req.body.username
+        }
+      }).then(function(data){
+        console.log(data)
+        if (data.password == req.body.pwdin){
+          console.log("match password")
+        } else {
+          console.log("mismatch password")
+        }
+      })
+    })
+
     //get all customers
     app.get("/api/customers", function (req, res) {
         db.Customer.findAll({}).then(function (result) {
