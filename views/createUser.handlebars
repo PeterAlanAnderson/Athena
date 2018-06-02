@@ -17,19 +17,15 @@
                         <label for="username"> Username: </label>
                     </div>
                     <div class="input-field center-align">
-                        <input id="address" type="text" class="validate">
-                        <label for="address">Address:</label>
-                    </div>
-                    <div class="input-field center-align">
-                        <input id="password" type="password" class="validate">
+                        <input id="password" type="password" data-rule-password="true" class="validate">
                         <label for="password">Password:</label>
                     </div>
                     <div class="input-field">
-                        <input id="password" type="password" class="validate">
-                        <label for="password">Verify Password:</label>
+                        <input id="password_confirm" type="password" data-rule-password="true" data-rule-equalTo="#password" class="validate">
+                        <label for="password_confirm">Confirm Password:</label>
                     </div>
                     <div>
-                        <button class="btn indigo lighten-2 waves-effect waves-light" id="submit">Create User
+                        <button class="btn indigo lighten-2 waves-effect waves-light" id="submitUserInfo">Create User
                 </button>
 
                 </form>
