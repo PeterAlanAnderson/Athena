@@ -189,10 +189,6 @@ a:visited {
   }
 
 
-
-
-
-
 /*LOG-IN PAGE*/
 #logInSection {
     border-radius: 1%;
@@ -202,12 +198,24 @@ a:visited {
     margin-bottom: 20%;
 }
 
+#enterinfo {
+    border-radius: 1%;
+    margin-top: 5%;
+    padding: 2%;
+    margin-bottom: 20%;
+
+}
+
 .carousel .carousel-slider {
 	height: 407.656px;
 }
 
 #card-section {
   padding-top: 2%;
+}
+
+.card.large {
+    height: auto;
 }
 
 
