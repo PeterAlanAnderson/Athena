@@ -47,7 +47,12 @@ $(document).ready(function () {
 
     function checkLogin(email, password){
       console.log(email,password)
-      $.get("/api/customer/"+email, function(data){
+      let loginDetails = {
+        username: email,
+        pwdin: password
+      }
+      $.get("/api/login", loginDetails, function(data){
+
         // let checkPassword = data.password
         // console.log(data.password)
         // if (checkPassword == password){
