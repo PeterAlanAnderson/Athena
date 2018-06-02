@@ -2,7 +2,8 @@ $(document).ready(function () {
     console.log("page loaded");
     console.log("currently logged in as: " + localStorage.getItem("email"));
     var customerData = [];
-    var customerUserName
+    var customerUserName;
+    var customerID;
     userData();
     //test to see if a user is logged in
     function userData() {
@@ -13,14 +14,16 @@ $(document).ready(function () {
 
             for (i = 0; i < customerData.length; i++) {
                 if (customerData[i].email === localStorage.getItem("email")) {
-                    customerUserName = customerData[i].username
+                    customerUserName = customerData[i].username;
+                    customerID = customerData[i].id;
                 }
             }
             console.log(customerUserName);
+            console.log(customerID);
         });
     }
 
-    $("#addItemForm").submit(function (event) {
+    $("#submit").on("click", function (event) {
         event.preventDefault();
         itemName = ($("#itemName").val().trim());
         itemDescription = ($("#itemDescription").val().trim());
@@ -37,14 +40,16 @@ $(document).ready(function () {
             price: itemPrice,
             image: itemUrl,
             email: userEmail,
+            //this needs to be linked to the owner/currently logged in user
+           
             // need to either add code for this or inputs on the form to be able to add to a new item.  
             //  should be able to get the owner info from checking the email in the local storage.
-            category: "na",
-            owner: customerUserName
+           
+            owner: customerID
         };
 
         console.log("var newItem = ")
-        console.log(newItem);
+        // console.log(newItem);
 
         $.post("/api/item", newItem)
             // on success, run this callback
