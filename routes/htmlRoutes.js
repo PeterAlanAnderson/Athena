@@ -21,7 +21,8 @@ module.exports = function(app) {
   });
 
   app.get("/addItem", function(req, res) {
-    res.render("addItem");
+    // res.render("addItem");
+    res.sendFile(path.join(__dirname, "../Public/addItem.html"));
   });
 
   app.get("/checkout", function(req, res) {

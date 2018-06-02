@@ -15,6 +15,12 @@ module.exports = (sequelize, DataTypes) => {
             validate: {len:[1, 75]},
             allowNull: false
         },
+        // Added email into customer data
+        email: {
+            type: DataTypes.STRING,
+            validate: {len:[1, 40]},
+            allowNull: false
+        },
         password: {
             type: DataTypes.STRING,
             validate: {len:[1, 20]}
