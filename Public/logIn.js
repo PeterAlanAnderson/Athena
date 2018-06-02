@@ -53,9 +53,14 @@ $(document).ready(function () {
       }
       console.log(loginDetails)
       localStorage.setItem("userName", email)
-      $.post("/api/login", loginDetails, function(data){
+      $.ajax({
+        url: "/api/login",
+        type: "PATCH",
+        data: loginDetails
+      }).then(function(data){
         localStorage.setItem("userName", null)
-        alert("Invalid username/password combination")
+        window.location.href = "/userPage"
+        console.log(data)
 
         // let checkPassword = data.password
         // console.log(data.password)
