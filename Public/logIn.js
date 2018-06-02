@@ -48,16 +48,16 @@ $(document).ready(function () {
     function checkLogin(email, password){
       console.log(email,password)
       $.get("/api/customer/"+email, function(data){
-        let checkPassword = data.password
-        console.log(data.password)
-        if (checkPassword == password){
-          localStorage.setItem("userData", JSON.stringify(data))
-          localStorage.setItem("loggedIn", "true")
-          $.get("/userPage", function(){})
-        } else {
-          alert("Invalid username/password combination")
-          return false;
-        }
+        // let checkPassword = data.password
+        // console.log(data.password)
+        // if (checkPassword == password){
+        //   localStorage.setItem("userData", JSON.stringify(data))
+        //   localStorage.setItem("loggedIn", "true")
+          // $.get("/userPage", function(){})
+        // } else {
+        //   alert("Invalid username/password combination")
+        //   return false;
+        // }
 
       })
     }
