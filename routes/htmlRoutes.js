@@ -16,8 +16,8 @@ module.exports = function(app) {
     res.render("user");
   });
 
-  app.get("/itemPage", function(req, res) {
-    res.sendFile(path.join(__dirname, "../Public/itemPage.html"));
+  app.get("/item", function(req, res) {
+    res.render("item");
   });
 
   app.get("/addItem", function(req, res) {
