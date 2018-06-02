@@ -26,8 +26,8 @@ $(document).ready(function () {
     $("#submit").on("click",function (event) {
         event.preventDefault();
         console.log("click")
-        email = "peter.alan.anderson@gmail.com"
-        password = "puppies"
+        let email = "peter.alan.anderson@gmail.com"
+        let password = "puppies"
         checkLogin(email, password)
 
 
@@ -51,7 +51,11 @@ $(document).ready(function () {
         username: email,
         pwdin: password
       }
-      $.get("/api/login", loginDetails, function(data){
+      console.log(loginDetails)
+      localStorage.setItem("userName", email)
+      $.post("/api/login", loginDetails, function(data){
+        localStorage.setItem("userName", null)
+        alert("Invalid username/password combination")
 
         // let checkPassword = data.password
         // console.log(data.password)
