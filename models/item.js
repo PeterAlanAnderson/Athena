@@ -42,6 +42,9 @@ module.exports = (sequelize, DataTypes) => {
         },
         tags: {
             type: DataTypes.TEXT
+        },
+        owner: {
+            type: DataTypes.INTEGER
         }
 
     });
