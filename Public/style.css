@@ -176,13 +176,20 @@ a:visited {
   */}
 }
 
-  .carouselText {
-    position: absolute;
-    top: 2%;
-    left: 50%;
-    transform: translate(-50%, -50%);
+  h2.carouselText {
+/*    font-size: 3.56rem;
+*/    line-height: 108%;
+    margin: 2.3733333333rem 0 34.424rem 0;
+    background-color: rgb(110, 120, 166);
 
   }
+
+  h2 {
+/*     margin: 2.3733333333rem 0 34.424rem 0;
+*/      background-color: rgb(110, 120, 166);
+
+  }
+
 
   .carousel .carousel-item>img {
     width: 100%;

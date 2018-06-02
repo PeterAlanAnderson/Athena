@@ -7,7 +7,7 @@ $(document).ready(function () {
   $('.carousel.carousel-slider').carousel({
     fullWidth: true,
     indicators: true,
-    duration: 300
+    duration: 200
   });
    $('.sidenav').sidenav();
    $('.dropdown-trigger').dropdown();
