@@ -10,21 +10,21 @@ module.exports = function (app) {
     })
 
     //get one customer
-    app.get("/api/customer", function (req, res) {
-        db.Customer.findOne({
-            where: {
-                name: req.body.name
-            }
-        }).then(function (result) {
-            res.json(result)
-        })
-    })
+    // app.get("/api/customer/:name", function (req, res) {
+    //     db.Customer.findOne({
+    //         where: {
+    //             name: req.body.name
+    //         }
+    //     }).then(function (result) {
+    //         res.json(result)
+    //     })
+    // })
 
     //get one username
-    app.get("/api/customer/user", function (req, res) {
+    app.get("/api/customer/:user", function (req, res) {
         db.Customer.findOne({
             where: {
-                username: req.body.username
+                username: req.params.user
             }
         }).then(function (result) {
             res.json(result)
@@ -36,7 +36,7 @@ module.exports = function (app) {
         db.Customer.create({
             name: req.body.name,
             username: req.body.username,
-            password: req.body.passoword,
+            password: req.body.password,
             vendor: req.body.vendor,
             storeName: req.body.storeName,
             likedTags: req.body.likedTags,
