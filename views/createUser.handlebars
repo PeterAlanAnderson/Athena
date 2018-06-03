@@ -5,12 +5,8 @@
                 <br><br>
                 <form class="container col s6 center">
                     <div class="input-field">
-                        <input id="first_name" type="text" class="validate">
-                        <label for="first_name">First Name:</label>
-                    </div>
-                    <div class="input-field">
-                        <input id="last_name" type="text" class="validate">
-                        <label for="last_name">Last Name:</label>
+                        <input id="customer_name" type="text" class="validate">
+                        <label for="customer_name">Name (first and Last):</label>
                     </div>
                     <div class="input-field ">
                         <input id="userName" type="text" class="validate">
@@ -21,7 +17,7 @@
                         <label for="password">Password:</label>
                     </div>
                     <div class="input-field">
-                        <input id="password_confirm" type="password" data-rule-password="true" data-rule-equalTo="#password" class="validate">
+                        <input id="password_confirm" type="password" data-rule-password="true" data-rule-equalTo="#password" class="validate"><span id="password_message"></span>
                         <label for="password_confirm">Confirm Password:</label>
                     </div>
                     <div>

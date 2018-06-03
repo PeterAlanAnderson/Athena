@@ -1,67 +1,43 @@
    $(document).ready(function () {
 
 
-   // $(this).validate({
-   //      rules : {
-   //          password : {
-   //              minlength : 5
-   //          },
-   //          password_confirm: {
-   //              minlength : 5,
-   //              equalTo : '[name="password"]'
-   //          }
+    $("#password, #password_confirm").on("keyup", function () {
+        if ($("#password").val() == $("#password_confirm").val()) {
+            $("#password_message").html("Password Matching").css("color", "green");
+        } else 
+            $("#password_message").html("Password Not Matching").css("color", "red")
+    });
 
-   //      },
-   // })
 
 
 
     $("#submitUserInfo").on("click" ,function (event) {
-
-
-   //       $(this).validate({
-   //      rules : {
-   //          password : {
-   //              minlength : 5
-   //          },
-   //          password_confirm: {
-   //              minlength : 5,
-   //              equalTo : '[name="password"]'
-   //          }
-
-   //      },
-   // })
-
-
-        event.preventDefault();
-        first_name = ($("#first_name").val().trim());
-        last_name = ($("#last_name").val().trim());
+        
+        event.preventDefault(); 
+        customer_name = ($("#customer_name").val().trim());
         userName = ($("#userName").val().trim());
         password = ($("#password").val().trim());
 
 
 
-        // itemDescription = ($("#itemDescription").val().trim());
-        // itemPrice = ($("#price").val().trim());
-        // itemUrl = ($("#itemPhoto").val().trim());
 
-        console.log(first_name);
-        console.log(last_name);
+        console.log(customer_name);
         console.log(userName);
         console.log(password);
 
+        var newCustomer = {
+            name: customer_name,
+            userName: userName,
+            password: password
+        };
+
+        console.log("New Customer logged as " + JSON.stringify(newCustomer))
+
+
+        $.post("/api/customers")
 
 
 
-// var newItem = {
-//     name: first_name,
-//     username: itemDescription,
-//     password: itemPrice,
-//     image: itemUrl
-//   };
-
-// console.log("var newItem = ")
-// console.log(newItem);
 
 // $.post("/api/item")
 
@@ -69,4 +45,17 @@
 
 
 });
+
+   //         $("#password").validate({
+   //      rules : {
+   //          password : {
+   //              minlength : 5
+   //          },
+   //          password_confirm: {
+   //              minlength : 5,
+   //              equalTo : '[name="password"]'
+   //          }
+
+   //      },
+   // })
  
