@@ -16,8 +16,8 @@ module.exports = function(app) {
     res.render("user");
   });
 
-  app.get("/itemPage", function(req, res) {
-    res.sendFile(path.join(__dirname, "../Public/itemPage.html"));
+  app.get("/item", function(req, res) {
+    res.render("item");
   });
 
   app.get("/addItem", function(req, res) {
@@ -28,4 +28,18 @@ module.exports = function(app) {
     res.render("checkout");
   });
 
+  app.get("/search", function(req, res) {
+    res.render("search");
+  });
+
+
+  app.get("/allItems", function(req, res) {
+    res.render("allItems");
+  });
+
+  app.get("/createUser", function(req, res) {
+    res.render("createUser");
+  });
+
 };
+

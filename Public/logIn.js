@@ -26,8 +26,8 @@ $(document).ready(function () {
     $("#submit").on("click",function (event) {
         event.preventDefault();
         console.log("click")
-        email = "peter.alan.anderson@gmail.com"
-        password = "puppies"
+        let email = "peter.alan.anderson@gmail.com"
+        let password = "puppies"
         checkLogin(email, password)
 
 
@@ -47,17 +47,31 @@ $(document).ready(function () {
 
     function checkLogin(email, password){
       console.log(email,password)
-      $.get("/api/customer/"+email, function(data){
-        let checkPassword = data.password
-        console.log(data.password)
-        if (checkPassword == password){
-          localStorage.setItem("userData", JSON.stringify(data))
-          localStorage.setItem("loggedIn", "true")
-          $.get("/userPage", function(data){})
-        } else {
-          alert("Invalid username/password combination")
-          return false;
-        }
+      let loginDetails = {
+        username: email,
+        pwdin: password
+      }
+      console.log(loginDetails)
+      localStorage.setItem("userName", email)
+      $.ajax({
+        url: "/api/login",
+        type: "PATCH",
+        data: loginDetails
+      }).then(function(data){
+        localStorage.setItem("userName", null)
+        window.location.href = "/userPage"
+        console.log(data)
+
+        // let checkPassword = data.password
+        // console.log(data.password)
+        // if (checkPassword == password){
+        //   localStorage.setItem("userData", JSON.stringify(data))
+        //   localStorage.setItem("loggedIn", "true")
+          // $.get("/userPage", function(){})
+        // } else {
+        //   alert("Invalid username/password combination")
+        //   return false;
+        // }
 
       })
     }

@@ -1,3 +1,4 @@
+
 module.exports = (sequelize, DataTypes) => {
     var Item = sequelize.define("Item", {
         id: {
@@ -42,9 +43,6 @@ module.exports = (sequelize, DataTypes) => {
         },
         tags: {
             type: DataTypes.TEXT
-        },
-        owner: {
-            type: DataTypes.INTEGER
         }
 
     });
@@ -61,3 +59,4 @@ module.exports = (sequelize, DataTypes) => {
     };
     return Item;
 }
+
