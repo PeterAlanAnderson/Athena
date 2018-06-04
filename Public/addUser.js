@@ -19,7 +19,7 @@ $(document).ready(function () {
 
 
         console.log(customer_name);
-        console.og(emailuser)
+        console.log(emailuser)
         console.log(userName);
         console.log(password);
 
