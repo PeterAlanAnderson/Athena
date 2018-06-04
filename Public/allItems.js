@@ -6,7 +6,7 @@ $(document).ready(function(){
         for(var i=0; i < data.length; i++)
         {
             console.log("working on",data[i])
-            let itemCard = '<div class="card medium hoverable"><div class="card-image waves-effect waves-block waves-light">'
+            let itemCard = '<div class="card medium hoverable col s3"><div class="card-image waves-effect waves-block waves-light">'
             itemCard += '<a href="http://www.google.com" target="_blank"><img id="image"src="'
             itemCard += data[i].image
             itemCard += '"></a></div>'
