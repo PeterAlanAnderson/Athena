@@ -15,7 +15,9 @@ $(document).ready(function(){
             itemCard += data[i].name    
             itemCard += '<i class="material-icons right">close</i></span><p id="itemDescription" class="indigo">'
             itemCard += data[i].description
-            itemCard += '</p><h6>Price</h6></div></div>'
+            itemCard += '</p><h6>Price: $'
+            itemCard += data[i].price
+            itemCard += '</h6></div></div>'
             console.log(itemCard)
 
             $("#itemsContainer").append(itemCard)
