@@ -14,13 +14,18 @@ $(document).ready(function () {
         customer_name = ($("#customer_name").val().trim());
         userName = ($("#userName").val().trim());
         password = ($("#password").val().trim());
+        emailuser = ($("#emailuser").val().trim());
+
+
 
         console.log(customer_name);
+        console.log(emailuser)
         console.log(userName);
         console.log(password);
 
         var newCustomer = {
             name: customer_name,
+            email: emailuser,
             userName: userName,
             password: password
         };
