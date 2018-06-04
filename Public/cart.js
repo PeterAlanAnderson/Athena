@@ -6,12 +6,14 @@ $(document).ready(function () {
 
     function checkCart() {
         localStorageItems.push(JSON.parse(localStorage.getItem('shoppingCart')));
+        var cartTotal = 0;
         for (j < 0; j < localStorageItems.length; j++) {
+
             $("#cartItemName").val(localStorageItems[i].name);
             $("#cartItemPrice").val(localStorageItems[i].price)
-            var cartTotal = +localStorageItems[i].price
-            $("#cartTotal").val(cartTotal)
+            cartTotal = +localStorageItems[i].price
         }
+        $("#cartTotal").val(cartTotal)
     }
 
     $("#addToCart").on("click", function (event) {
@@ -39,19 +41,20 @@ $(document).ready(function () {
 
     //************* post purchase log on checkout
 
-    $("#placeOrder").on("click", function(){
-            for (k < 0; k < localStorage.length ; k++){
-               var cartItemId = localStorageItems[i].id;
-               var newLog = {
-                   purchaseId: Date.UTC(), 
-                   itemId: cartItemId,
-                   quantity: 1,
-                   date: Date.now()
-               }
-               $.post("/api/purchaseLog", newLog, function(data){
-                   console.log("purchageLog created");
-               })
+    $("#placeOrder").on("click", function () {
+        for (k < 0; k < localStorage.length; k++) {
+            var cartItemId = localStorageItems[i].id;
+            var newLog = {
+                purchaseId: Date.UTC(),
+                itemId: cartItemId,
+                quantity: 1,
+                date: Date.now()
             }
+            $.post("/api/purchaseLog", newLog, function (data) {
+                console.log(data);
+                console.log("purchageLog created");
+            })
+        }
     })
 })
 
