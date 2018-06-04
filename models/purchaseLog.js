@@ -6,7 +6,7 @@ module.exports = (sequelize, DataTypes) => {
             primaryKey: true
         },
         purchaseID: {
-            type: DataTypes.TIMESTAMP
+            type: DataTypes.UUID
         },
         itemId: {
             type: DataTypes.INTEGER
