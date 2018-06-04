@@ -1,18 +1,18 @@
 <div class="section">
     <div class="container">
         <div>
-        <h2 class="center-align">{{user}}</h2>
+        <h2 class="center-align" id="userTitle">User</h2>
         </div>
         <div class="row">
             <div class="col s4">
                 <div class="card-image">
-                    <img src={{user.image}} width="100%">
+                    <img id="userImage" src="" width="100%">
                 </div>
             </div>
             <div class="col s4">
                 <div class="card blue-grey lighten-4">
                     <div class="card-content">
-                        <h6 id="name">Name: </h5>
+                        <h5 id="name">Name: </h5>
                         <h6 id="username">Username:</h6>
                         <h6 id="address">Address:</h6>
                         <h6 id="email">Email:</h6>
@@ -22,7 +22,7 @@
             <div class="col s4">
                 <div class="card blue-grey lighten-4">
                     <div class="card-content">
-                        <h6 id="vendor">--vendor-- </h6>
+                        <h6 id="vendorName">--vendor-- </h6>
                         <h6 id="vendor">Items for sale: </h6>
                         <h6 id="revenue">Total revenue: </h6>
                         <button class="btn indigo lighten-2 waves-effect waves-light" id="newVendor">Become Vendor
@@ -49,15 +49,15 @@
                         <input id="itemName" type="text" class="validate">
                         <label for="itemName">Item name:</label>
                     </div>
-                    <div class="input-field ">
+                    <div class="input-field">
                         <input id="itemDescription" type="text" class="validate">
                         <label for="itemDescription">Item description: </label>
                     </div>
-                    <div class="input-field col s10 center-align">
+                    <div class="input-field center-align">
                         <input id="price" type="text" class="validate">
                         <label for="price">Price:</label>
                     </div>
-                    <div class="input-field col s10 center-align">
+                    <div class="input-field center-align">
                         <input id="itemPhoto" type="password" class="validate">
                         <label for="itemPhoto">Photo:</label>
                     </div>
@@ -71,4 +71,5 @@
     <div class="modal-footer">
         <a href="#!" class="modal-close waves-effect waves-green btn-flat">Agree</a>
     </div>
+    <script src="user.js"></script>
 </div>

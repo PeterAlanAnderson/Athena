@@ -7,19 +7,19 @@ module.exports = function (app) {
       console.log(req.body)
       db.Customer.findOne({
         where:{
-          username: req.body.username
+          email: req.body.emailAddress
         }
       }).then(function(data){
         console.log(data)
         if (data.password == req.body.pwdin){
           console.log("match password")
           // res.render("user")
-          res.json(data)
+          res.send("true")
         } else {
           console.log("mismatch password")
           // res.render("user", user)
           // return
-          res.json(data)
+          res.send("false")
         }
       })
     })
@@ -43,10 +43,10 @@ module.exports = function (app) {
     // })
 
     //get one username
-    app.get("/api/customer/:user", function (req, res) {
+    app.get("/api/customer/:email", function (req, res) {
         db.Customer.findOne({
             where: {
-                username: req.params.user
+                email: req.params.email
             }
         }).then(function (result) {
             res.json(result)
@@ -58,6 +58,7 @@ module.exports = function (app) {
         db.Customer.create({
             name: req.body.name,
             username: req.body.username,
+            email: req.body.email,
             password: req.body.password,
             vendor: req.body.vendor,
             storeName: req.body.storeName,

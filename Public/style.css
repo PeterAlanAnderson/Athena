@@ -161,19 +161,12 @@ a:visited {
 
 
 .carousel .carousel-slider {
-	height: 407.656px;
-}
+/*	height: 407.656px;
+*/}
 
 #card-section {
   padding-top: 2%;
 }
-
-.carousel .carousel-item>img {
-/*  width: 100%;
-*/  /*    top: 7px;
-  */    /*position: relative;*/
-  /*    top: -86px;
-  */}
 
 
   h2.carouselText {
@@ -185,23 +178,15 @@ a:visited {
   }
 
   h2 {
-/*     margin: 2.3733333333rem 0 34.424rem 0;
-*/      background-color: rgb(110, 120, 166);
+   /*  margin: 2.3733333333rem 0 34.424rem 0;
+      background-color: rgb(110, 120, 166);*/
 
   }
 
-
-  .carousel .carousel-item>img {
-    width: 100%;
-  }
 
   .card-title {
     text-shadow: 2px 2px 18px #000000;
   }
-
-
-
-
 
 
 /*LOG-IN PAGE*/
@@ -213,12 +198,21 @@ a:visited {
     margin-bottom: 20%;
 }
 
-.carousel .carousel-slider {
-	height: 407.656px;
+#enterinfo {
+    border-radius: 1%;
+    margin-top: 5%;
+    padding: 2%;
+    margin-bottom: 20%;
+
 }
+
 
 #card-section {
   padding-top: 2%;
+}
+
+.card.large {
+    height: auto;
 }
 
 
