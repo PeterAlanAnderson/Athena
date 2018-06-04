@@ -43,10 +43,10 @@ module.exports = function (app) {
     // })
 
     //get one username
-    app.get("/api/customer/:user", function (req, res) {
+    app.get("/api/customer/:email", function (req, res) {
         db.Customer.findOne({
             where: {
-                username: req.params.user
+                email: req.params.email
             }
         }).then(function (result) {
             res.json(result)

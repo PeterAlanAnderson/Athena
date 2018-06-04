@@ -61,7 +61,7 @@ $(document).ready(function () {
         if(data == "false"){
           alert("You have entered an incorrect username/password combination.  Please try again.")
         } else {
-          sessionStorage.setItem("userName", email)
+          sessionStorage.setItem("userEmail", email)
           sessionStorage.setItem("isLoggedIn", "true")
           window.location.href = "/userPage"
         }
@@ -112,19 +112,45 @@ $(document).ready(function () {
     //
     // var items = [];
     // var testItem = {
-    //     name: "Test Item",
-    //     description: "This item is for testing purposes only",
+    //     name: "Pizza",
+    //     description: "This pizza is a good ol' fashioned pizza for eating yum yum!",
     //     quantity: 20,
     //     auction: false,
-    //     price: 175.49,
-    //     image: "https://pbs.twimg.com/profile_images/507251035929190400/BDUL3Uzt_400x400.png",
-    //     category: "electronics",
+    //     price: 6.49,
+    //     image: "https://target.scene7.com/is/image/Target/51226551_Alt01?wid=520&hei=520&fmt=pjpeg",
+    //     category: "food",
     //     featured: true,
     //     totalSold: 2,
-    //     tags: "electronics, cool, essential",
+    //     tags: "food, comfort food, cheese",
     //     owner: 1
     // };
-    //
+    // var testItem2 = {
+    //     name: "Taco Cat",
+    //     description: "Part taco, part cat, all fun!",
+    //     quantity: 20,
+    //     auction: false,
+    //     price: 200,
+    //     image: "http://photos.costume-works.com/x3/taco_cat.jpg",
+    //     category: "pets",
+    //     featured: true,
+    //     totalSold: 2,
+    //     tags: "pet, pets, cat, food, mexican food",
+    //     owner: 1
+    // };
+    // var testItem3 = {
+    //     name: "Bike",
+    //     description: "This is a kids mountain bike",
+    //     quantity: 20,
+    //     auction: false,
+    //     price: 275.25,
+    //     image: "https://s7d2.scene7.com/is/image/dkscdn/17GTXMBNKXXXXXXXXBMX_Green/?$DSG_ProductCard$",
+    //     category: "outdoors",
+    //     featured: true,
+    //     totalSold: 2,
+    //     tags: "bike, transportation, outdoors, exercise",
+    //     owner: 1
+    // };
+    
     // function getItems(){
     //     $.get("/api/items", function (data){
     //         items = data;
@@ -136,4 +162,6 @@ $(document).ready(function () {
     //     $.post("/api/item", NewItem, getItems)
     // };
     // createItem(testItem);
+    // createItem(testItem2);
+    // createItem(testItem3);
 });
