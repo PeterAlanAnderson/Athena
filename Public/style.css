@@ -218,6 +218,8 @@ a:visited {
 
   /* search page */
 .itemsCard {
+  width: 300px;
+  height: 400px;
   margin: 2%;
   background-color: #f5f5f5;
 }
