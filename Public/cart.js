@@ -8,10 +8,10 @@ $(document).ready(function () {
         localStorageItems.push(JSON.parse(localStorage.getItem('shoppingCart')));
         var cartTotal = 0;
         for (j < 0; j < localStorageItems.length; j++) {
-
+            
             $("#cartItemName").val(localStorageItems[i].name);
-            $("#cartItemPrice").val(localStorageItems[i].price)
-            cartTotal = +localStorageItems[i].price
+            $("#cartItemPrice").val(localStorageItems[i].price);
+            cartTotal = +localStorageItems[i].price;
         }
         $("#cartTotal").val(cartTotal)
     }
