@@ -2,26 +2,26 @@ var db = require("../models")
 
 module.exports = function (app) {
 
-//login api
-    app.patch("/api/login", function(req, res){
-      console.log(req.body)
-      db.Customer.findOne({
-        where:{
-          email: req.body.emailAddress
-        }
-      }).then(function(data){
-        console.log(data)
-        if (data.password == req.body.pwdin){
-          console.log("match password")
-          // res.render("user")
-          res.send("true")
-        } else {
-          console.log("mismatch password")
-          // res.render("user", user)
-          // return
-          res.send("false")
-        }
-      })
+    //login api
+    app.patch("/api/login", function (req, res) {
+        console.log(req.body)
+        db.Customer.findOne({
+            where: {
+                email: req.body.emailAddress
+            }
+        }).then(function (data) {
+            console.log(data)
+            if (data.password == req.body.pwdin) {
+                console.log("match password")
+                // res.render("user")
+                res.send("true")
+            } else {
+                console.log("mismatch password")
+                // res.render("user", user)
+                // return
+                res.send("false")
+            }
+        })
     })
 
     //get all customers
@@ -55,7 +55,7 @@ module.exports = function (app) {
 
     //POST new customer
     app.post("/api/customer", function (req, res) {
-        console.log("posting "+ req.body.name)
+        console.log("posting " + req.body.name)
         db.Customer.create({
             name: req.body.name,
             username: req.body.username,
@@ -96,12 +96,22 @@ module.exports = function (app) {
         })
     })
 
-    app.get("/api/items/:category", function(req,res){
+    app.get("/api/items/:id", function (req, res) {
+        db.Item.findOne({
+            where: {
+                id: req.params.id
+            }
+        }).then(function (data) {
+            res.json(data)
+        })
+    })
+    
+    app.get("/api/items/:category", function (req, res) {
         db.Item.findAll({
-            where:{
+            where: {
                 category: req.params.category
             }
-        }).then(function(data){
+        }).then(function (data) {
             res.json(data)
         })
     })
