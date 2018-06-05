@@ -96,6 +96,16 @@ module.exports = function (app) {
         })
     })
 
+    app.get("/api/items/:category", function(req,res){
+        db.Item.findAll({
+            where:{
+                category: req.params.category
+            }
+        }).then(function(data){
+            res.json(data)
+        })
+    })
+
     // Get all items where totalSold => 1, order DESC
     app.get("/api/items/ts", function (req, res) {
         db.Item.findAll({
