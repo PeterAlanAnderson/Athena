@@ -127,10 +127,8 @@ $(document).ready(function () {
     function createUser(NewUser){
       $.post("/api/customer", NewUser, getUsers);
     }
-    
     createUser(user1)
-        
-    var items = [];
+    // var items = [];
     var testItem = {
         name: "Pizza",
         description: "This pizza is a good ol' fashioned pizza for eating yum yum!",

@@ -109,16 +109,11 @@ a:visited {
 }
 
 
-/*footers*/
-.body {
-    display: flex;
-    min-height: 100vh;
-    flex-direction: column;
-  }
-
-.main {
-    flex: 1 0 auto;
-  }
+footer {
+  position: absolute;
+  left: 0;
+  right: 0;
+}
 
   /*input fields*/
 
