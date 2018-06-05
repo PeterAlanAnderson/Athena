@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
 	<title>Athena Shopping | A wise place to Shop</title>
 	<link href="https://fonts.googleapis.com/css?family=Nanum+Gothic" rel="stylesheet">
@@ -9,74 +10,109 @@
 	<script src="https://code.jquery.com/jquery-3.3.1.js" integrity="sha256-2Kok7MbOyxpgUVvAk/HJ2jigOSYS2auK4Pfzbm7uH60=" crossorigin="anonymous"></script>
 	<link rel="stylesheet" href="style.css">
 </head>
-	<body>
-  <main class="container-fluid">
-	<div id="headerImage" class="headerStyle">
-		<h1><a href="/">ATHENA</a></h1>
-		<i>a wise place to shop.</i>
-	</div>
 
-	<nav>
-	    <div class="nav-wrapper #eceff1 blue-grey lighten-5">
-	    	<a href="#" data-target="mobile-demo" class="sidenav-trigger"><i class="material-icons">menu</i></a>
-	      <ul>
+<body>
+	<main class="container-fluid">
+		<div id="headerImage" class="headerStyle">
+			<h1>
+				<a href="/">ATHENA</a>
+			</h1>
+			<i>a wise place to shop.</i>
+		</div>
+
+		<nav>
+			<div class="nav-wrapper #eceff1 blue-grey lighten-5">
+				<a href="#" data-target="mobile-demo" class="sidenav-trigger">
+					<i class="material-icons">menu</i>
+				</a>
+				<ul>
+					<li>
+						<form class="col s12">
+							<div class="row">
+								<div class="input-field searchNav">
+									<i id="searchButton" class="material-icons prefix">search</i>
+									<textarea id="icon_prefix2" class="materialize-textarea"></textarea>
+								</div>
+							</div>
+						</form>
+
+				</ul>
+				<ul id="nav-mobile" class="right hide-on-med-and-down">
+					<li>
+						<a href="/allitems">
+							<i class="large material-icons left">search</i>
+						</a>
+					</li>
+					<li>
+						<a href="/">
+							<i class="large material-icons left">home</i>
+						</a>
+					</li>
+					<li>
+						<a class="dropdown-trigger" data-target='dropdown1' href="#">
+							<i class="large material-icons left">account_circle</i>
+						</a>
+					</li>
+					<li>
+						<a class="modal-trigger" href="/checkout">
+							<i class="large material-icons left">shopping_cart</i>
+						</a>
+					</li>
+				</ul>
+			</div>
+		</nav>
+
+
+		{{!-- sideNav for nav bar --}}
+		<ul class="sidenav" id="mobile-demo">
 			<li>
-				<form class="col s12">
-      <div class="row">
-        <div class="input-field searchNav">
-          <i class="material-icons prefix">search</i>
-          <textarea id="icon_prefix2" class="materialize-textarea"></textarea>
-        </div>
-      </div>
-    </form>
-
-			</ul>
-	      	<ul id="nav-mobile" class="right hide-on-med-and-down">
-						<li><a href="/allitems"><i class="large material-icons left">search</i></a></li>
-	        <li><a href="/"><i class="large material-icons left">home</i></a></li>
-	        <li><a class="dropdown-trigger" data-target='dropdown1' href="#"><i class="large material-icons left">account_circle</i></a></li>
-	      	<li><a class="modal-trigger" href="/checkout"><i class="large material-icons left">shopping_cart</i></a></li>
-	      </ul>
-	    </div>
-  	</nav>
+				<a class="indigo-text text-lighten-2" href="/">Home</a>
+			</li>
+			<li>
+				<a class="indigo-text text-lighten-2" href="/userPage">Account</a>
+			</li>
+			<li>
+				<a class="indigo-text text-lighten-2" href="/login">Log In</a>
+			</li>
+			<li>
+				<a class="modal-trigger indigo-text text-lighten-2" href="/checkout">Cart</a>
+			</li>
 
 
-{{!-- sideNav for nav bar --}}
-<ul class="sidenav" id="mobile-demo">
-    <li><a class="indigo-text text-lighten-2" href="/">Home</a></li>
-	<li><a class="indigo-text text-lighten-2" href="/userPage">Account</a></li>
-	<li><a class="indigo-text text-lighten-2" href="/login">Log In</a></li>
-	<li><a class="modal-trigger indigo-text text-lighten-2" href="/checkout">Cart</a></li>
+		</ul>
 
+		<!-- Dropdown Structure FOR ACCOUNT ICON -->
+		<ul id='dropdown1' class='dropdown-content'>
+			<li>
+				<a class="indigo-text text-lighten-2" href="/login">Log In</a>
+			</li>
+			<li>
+				<a class="indigo-text text-lighten-2" href="/userPage">Account</a>
+			</li>
+			<li class="divider" tabindex="-1"></li>
+		</ul>
 
-  </ul>
+		{{{ body }}}
 
-  <!-- Dropdown Structure FOR ACCOUNT ICON -->
-  <ul id='dropdown1' class='dropdown-content'>
-    <li><a class="indigo-text text-lighten-2" href="/login">Log In</a></li>
-    <li><a class="indigo-text text-lighten-2" href="/userPage">Account</a></li>
-    <li class="divider" tabindex="-1"></li>
-  </ul>
-
-{{{ body }}}
-
-<footer class="page-footer #9e9e9e grey">
-          <div class="footer-copyright">
-            <div class="container">
-            © 2014 Copyright Text
-            </div>
-          </div>
-</footer>
+		<footer class="page-footer #9e9e9e grey">
+			<div class="footer-copyright">
+				<div class="container">
+					© 2014 Copyright Text
+				</div>
+			</div>
+		</footer>
 
 
 
 
-</main>
+	</main>
 
-<script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0-beta/js/materialize.min.js"></script>
-<script src="app.js"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0-beta/js/materialize.min.js"></script>
+	<script src="search.js"></script>
+	<script src="app.js"></script>
 
 
 
-	</body>
+</body>
+
 </html>
