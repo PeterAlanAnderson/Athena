@@ -14,10 +14,10 @@ $(document).ready(function () {
       }
 
 
-    var currentEmail = localStorage.getItem("email")
-    var currentPassword = localStorage.getItem("password")
-    console.log("User Email: " + currentEmail);
-    console.log("User Password: " + currentPassword);
+    // var currentEmail = localStorage.getItem("email")
+    // var currentPassword = localStorage.getItem("password")
+    // console.log("User Email: " + currentEmail);
+    // console.log("User Password: " + currentPassword);
 
 
 
@@ -26,8 +26,8 @@ $(document).ready(function () {
     $("#submit").on("click",function (event) {
         event.preventDefault();
         console.log("click")
-        let email = "peter.alan.anderson@gmail.com"
-        let password = "puppies"
+        let email = $("#email").val()
+        let password = $("#password").val()
         checkLogin(email, password)
 
 
@@ -87,7 +87,7 @@ $(document).ready(function () {
 //                    HERE THERE BE TEST DATA
     // var customers = [];
     // var user1 = {
-    //   name: "peter",
+    //   name: "Peter Anderson",
     //   email: "peter.alan.anderson@gmail.com",
     //   username: "peterName",
     //   password: "puppies",
@@ -95,7 +95,27 @@ $(document).ready(function () {
     //   storeName: "my store",
     //   likedTags: "puppies, puppies, puppies"
     // }
-    
+
+    // var user2 = {
+    //   name: "Moe Hatab",
+    //   email: "moe@moe.com",
+    //   username: "bigmoe",
+    //   password: "moe",
+    //   vendor: false,
+    //   storeName: "ShopMoe",
+    //   likedTags: "puppies, puppies, puppies"
+    // }
+
+    // var user3 = {
+    //   name: "Al Gore",
+    //   email: "algore@government.com",
+    //   username: "AwesomeAl",
+    //   password: "excelsior",
+    //   vendor: false,
+    //   storeName: "Al Mart",
+    //   likedTags: "Al Gore"
+    // }
+
     // function getUsers() {
     //   $.get("/api/customers",function(data){
     //     customers = data;
@@ -109,47 +129,48 @@ $(document).ready(function () {
     // }
     
     // createUser(user1)
-    //
-    var items = [];
-    var testItem = {
-        name: "Pizza",
-        description: "This pizza is a good ol' fashioned pizza for eating yum yum!",
-        quantity: 20,
-        auction: false,
-        price: 6.49,
-        image: "https://target.scene7.com/is/image/Target/51226551_Alt01?wid=520&hei=520&fmt=pjpeg",
-        category: "food",
-        featured: true,
-        totalSold: 2,
-        tags: "food, comfort food, cheese",
-        owner: 1
-    };
-    var testItem2 = {
-        name: "Taco Cat",
-        description: "Part taco, part cat, all fun!",
-        quantity: 20,
-        auction: false,
-        price: 200,
-        image: "http://photos.costume-works.com/x3/taco_cat.jpg",
-        category: "pets",
-        featured: true,
-        totalSold: 2,
-        tags: "pet, pets, cat, food, mexican food",
-        owner: 1
-    };
-    var testItem3 = {
-        name: "Bike",
-        description: "This is a kids mountain bike",
-        quantity: 20,
-        auction: false,
-        price: 275.25,
-        image: "https://s7d2.scene7.com/is/image/dkscdn/17GTXMBNKXXXXXXXXBMX_Green/?$DSG_ProductCard$",
-        category: "outdoors",
-        featured: true,
-        totalSold: 2,
-        tags: "bike, transportation, outdoors, exercise",
-        owner: 1
-    };
+    
+    // var items = [];
+    // var testItem = {
+    //     name: "Pizza",
+    //     description: "This pizza is a good ol' fashioned pizza for eating yum yum!",
+    //     quantity: 20,
+    //     auction: false,
+    //     price: 6.49,
+    //     image: "https://target.scene7.com/is/image/Target/51226551_Alt01?wid=520&hei=520&fmt=pjpeg",
+    //     category: "food",
+    //     featured: true,
+    //     totalSold: 2,
+    //     tags: "food, comfort food, cheese",
+    //     owner: 1
+    // };
+    // var testItem2 = {
+    //     name: "Taco Cat",
+    //     description: "Part taco, part cat, all fun!",
+    //     quantity: 20,
+    //     auction: false,
+    //     price: 200,
+    //     image: "http://photos.costume-works.com/x3/taco_cat.jpg",
+    //     category: "pets",
+    //     featured: true,
+    //     totalSold: 2,
+    //     tags: "pet, pets, cat, food, mexican food",
+    //     owner: 1
+    // };
+    // var testItem3 = {
+    //     name: "Bike",
+    //     description: "This is a kids mountain bike",
+    //     quantity: 20,
+    //     auction: false,
+    //     price: 275.25,
+    //     image: "https://s7d2.scene7.com/is/image/dkscdn/17GTXMBNKXXXXXXXXBMX_Green/?$DSG_ProductCard$",
+    //     category: "outdoors",
+    //     featured: true,
+    //     totalSold: 2,
+    //     tags: "bike, transportation, outdoors, exercise",
+    //     owner: 1
+    // };
+
     
     function getItems(){
         $.get("/api/items", function (data){
@@ -161,7 +182,7 @@ $(document).ready(function () {
     function createItem(NewItem) {
         $.post("/api/item", NewItem, getItems)
     };
-    createItem(testItem);
-    createItem(testItem2);
-    createItem(testItem3);
+//    createItem(testItem);
+//    createItem(testItem2);
+//    createItem(testItem3);
 });
