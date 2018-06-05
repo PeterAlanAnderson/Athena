@@ -229,7 +229,7 @@ a:visited {
 
   /* search page */
 .itemsCard {
-  margin: 2%;
+  /* margin: 2%; */
   background-color: #f5f5f5;
 }
 
@@ -245,7 +245,7 @@ a:visited {
 }
 
 #cardImage {
-    padding: 20px;
+    padding: 10px;
 }
 
 /* #itemCard {
