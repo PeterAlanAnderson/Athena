@@ -38,6 +38,16 @@ i {
 
 }
 
+/* .container  {
+    display: flex;
+    /* position: absolute; */
+    /* top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    
+*/
+
 
 input:not([type]), input[type=text]:not(.browser-default), input[type=password]:not(.browser-default), input[type=email]:not(.browser-default), input[type=url]:not(.browser-default), input[type=time]:not(.browser-default), input[type=date]:not(.browser-default), input[type=datetime]:not(.browser-default), input[type=datetime-local]:not(.browser-default), input[type=tel]:not(.browser-default), input[type=number]:not(.browser-default), input[type=search]:not(.browser-default), textarea.materialize-textarea, input-field.searchNav {
     background-color: transparent;
@@ -85,6 +95,7 @@ a:visited {
 .material-icons {
 	color: #6e78a6;
 }
+
 
 .sidenav li>a {
     color: rgba(0,0,0,0.87);
@@ -231,6 +242,14 @@ a:visited {
   color: #6f79a8;
   background-color: transparent;
   text-decoration: none;
+}
+
+#cardImage {
+    padding: 20px;
+}
+
+#itemCard {
+    margin: 2%;
 }
 
 

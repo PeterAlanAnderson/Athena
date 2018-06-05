@@ -85,6 +85,7 @@ $(document).ready(function () {
 
 //***********************************************************
 //                    HERE THERE BE TEST DATA
+
     // var customers = [];
     // var user1 = {
     //   name: "Peter Anderson",
@@ -171,7 +172,6 @@ $(document).ready(function () {
     //     owner: 1
     // };
 
-    
     function getItems(){
         $.get("/api/items", function (data){
             items = data;
@@ -185,4 +185,5 @@ $(document).ready(function () {
 //    createItem(testItem);
 //    createItem(testItem2);
 //    createItem(testItem3);
+
 });
