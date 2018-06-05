@@ -115,7 +115,7 @@ $(document).ready(function () {
     //   storeName: "Al Mart",
     //   likedTags: "Al Gore"
     // }
-    
+
     // function getUsers() {
     //   $.get("/api/customers",function(data){
     //     customers = data;
@@ -170,18 +170,19 @@ $(document).ready(function () {
     //     tags: "bike, transportation, outdoors, exercise",
     //     owner: 1
     // };
+
     
-    // function getItems(){
-    //     $.get("/api/items", function (data){
-    //         items = data;
-    //         console.log("this is a test item");
-    //         console.log(items)
-    //     })
-    // }
-    // function createItem(NewItem) {
-    //     $.post("/api/item", NewItem, getItems)
-    // };
-    // createItem(testItem);
-    // createItem(testItem2);
-    // createItem(testItem3);
+    function getItems(){
+        $.get("/api/items", function (data){
+            items = data;
+            console.log("this is a test item");
+            console.log(items)
+        })
+    }
+    function createItem(NewItem) {
+        $.post("/api/item", NewItem, getItems)
+    };
+//    createItem(testItem);
+//    createItem(testItem2);
+//    createItem(testItem3);
 });

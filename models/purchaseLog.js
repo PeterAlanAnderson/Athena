@@ -6,8 +6,10 @@ module.exports = (sequelize, DataTypes) => {
             primaryKey: true
         },
         purchaseID: {
+            type: DataTypes.UUID
+        },
+        itemId: {
             type: DataTypes.INTEGER
-            // ,autoIncrement: true
         },
         quantity: {
             type: DataTypes.INTEGER
