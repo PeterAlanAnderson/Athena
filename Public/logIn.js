@@ -85,31 +85,31 @@ $(document).ready(function () {
 
 //***********************************************************
 //                    HERE THERE BE TEST DATA
-    // var customers = [];
-    // var user1 = {
-    //   name: "peter",
-    //   email: "peter.alan.anderson@gmail.com",
-    //   username: "peterName",
-    //   password: "puppies",
-    //   vendor: false,
-    //   storeName: "my store",
-    //   likedTags: "puppies, puppies, puppies"
-    // }
-    //
-    // function getUsers() {
-    //   $.get("/api/customers",function(data){
-    //     customers = data;
-    //     console.log("got here!")
-    //     console.log(customers)
-    //   })
-    // }
-    //
-    // function createUser(NewUser){
-    //   $.post("/api/customer", NewUser, getUsers);
-    // }
-    //
-    // createUser(user1)
-    //
+//     var customers = [];
+//     var user1 = {
+//       name: "peter",
+//       email: "peter.alan.anderson@gmail.com",
+//       username: "peterName",
+//       password: "puppies",
+//       vendor: false,
+//       storeName: "my store",
+//       likedTags: "puppies, puppies, puppies"
+//     }
+    
+//     function getUsers() {
+//       $.get("/api/customers",function(data){
+//         customers = data;
+//         console.log("got here!")
+//         console.log(customers)
+//       })
+//     }
+    
+//     function createUser(NewUser){
+//       $.post("/api/customer", NewUser, getUsers);
+//     }
+    
+//     createUser(user1)
+    
     // var items = [];
     // var testItem = {
     //     name: "Pizza",
@@ -151,17 +151,17 @@ $(document).ready(function () {
     //     owner: 1
     // };
     
-    // function getItems(){
-    //     $.get("/api/items", function (data){
-    //         items = data;
-    //         console.log("this is a test item");
-    //         console.log(items)
-    //     })
-    // }
-    // function createItem(NewItem) {
-    //     $.post("/api/item", NewItem, getItems)
-    // };
-    // createItem(testItem);
-    // createItem(testItem2);
-    // createItem(testItem3);
+//     function getItems(){
+//         $.get("/api/items", function (data){
+//             items = data;
+//             console.log("this is a test item");
+//             console.log(items)
+//         })
+//     }
+//     function createItem(NewItem) {
+//         $.post("/api/item", NewItem, getItems)
+//     };
+//     createItem(testItem);
+//     createItem(testItem2);
+//     createItem(testItem3);
 });
