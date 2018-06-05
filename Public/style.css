@@ -171,10 +171,10 @@ a:visited {
 
   h2.carouselText {
 /*    font-size: 3.56rem;
-*/    line-height: 108%;
+*/  /*line-height: 108%;
     margin: 2.3733333333rem 0 34.424rem 0;
     background-color: rgb(110, 120, 166);
-
+*/
   }
 
   h2 {
@@ -244,6 +244,14 @@ a:visited {
 
 [type="radio"]:checked+span:after, [type="radio"].with-gap:checked+span:after {
     background-color: #6e78a6;
+}
+
+.collapsible-header i {
+     width: 5rem; 
+    font-size: 1.6rem;
+    display: inline-block;
+    text-align: center;
+    margin-right: 1rem;
 }
 
 
