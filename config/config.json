@@ -1,11 +1,7 @@
 {
   "development": {
     "username": "root",
-<<<<<<< HEAD
     "password": "",
-=======
-    "password": "Volund56",
->>>>>>> 99cc9e4a3e9b27e778abeda7d39b76458f1dc39f
     "database": "athenaDB",
     "host": "127.0.0.1",
     "dialect": "mysql"
