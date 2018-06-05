@@ -55,6 +55,7 @@ module.exports = function (app) {
 
     //POST new customer
     app.post("/api/customer", function (req, res) {
+        console.log("posting "+ req.body.name)
         db.Customer.create({
             name: req.body.name,
             username: req.body.username,

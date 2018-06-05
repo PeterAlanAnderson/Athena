@@ -14,10 +14,10 @@ $(document).ready(function () {
       }
 
 
-    var currentEmail = localStorage.getItem("email")
-    var currentPassword = localStorage.getItem("password")
-    console.log("User Email: " + currentEmail);
-    console.log("User Password: " + currentPassword);
+    // var currentEmail = localStorage.getItem("email")
+    // var currentPassword = localStorage.getItem("password")
+    // console.log("User Email: " + currentEmail);
+    // console.log("User Password: " + currentPassword);
 
 
 
@@ -26,8 +26,8 @@ $(document).ready(function () {
     $("#submit").on("click",function (event) {
         event.preventDefault();
         console.log("click")
-        let email = "peter.alan.anderson@gmail.com"
-        let password = "puppies"
+        let email = $("#email").val()
+        let password = $("#password").val()
         checkLogin(email, password)
 
 
@@ -87,7 +87,7 @@ $(document).ready(function () {
 //                    HERE THERE BE TEST DATA
     // var customers = [];
     // var user1 = {
-    //   name: "peter",
+    //   name: "Peter Anderson",
     //   email: "peter.alan.anderson@gmail.com",
     //   username: "peterName",
     //   password: "puppies",
@@ -95,7 +95,27 @@ $(document).ready(function () {
     //   storeName: "my store",
     //   likedTags: "puppies, puppies, puppies"
     // }
-    //
+
+    // var user2 = {
+    //   name: "Moe Hatab",
+    //   email: "moe@moe.com",
+    //   username: "bigmoe",
+    //   password: "moe",
+    //   vendor: false,
+    //   storeName: "ShopMoe",
+    //   likedTags: "puppies, puppies, puppies"
+    // }
+
+    // var user3 = {
+    //   name: "Al Gore",
+    //   email: "algore@government.com",
+    //   username: "AwesomeAl",
+    //   password: "excelsior",
+    //   vendor: false,
+    //   storeName: "Al Mart",
+    //   likedTags: "Al Gore"
+    // }
+    
     // function getUsers() {
     //   $.get("/api/customers",function(data){
     //     customers = data;
@@ -103,13 +123,13 @@ $(document).ready(function () {
     //     console.log(customers)
     //   })
     // }
-    //
+    
     // function createUser(NewUser){
     //   $.post("/api/customer", NewUser, getUsers);
     // }
-    //
+    
     // createUser(user1)
-    //
+    
     // var items = [];
     // var testItem = {
     //     name: "Pizza",
