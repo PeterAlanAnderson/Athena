@@ -12,7 +12,9 @@ $(document).ready(function(){
             itemCard += '"></a></div>'
             itemCard += '<div class="card-content"><span class="card-title activator grey-text text-darken-4">'
             itemCard += data[i].name 
-            itemCard +='<i class="material-icons right">more_vert</i></span><button class="btn indigo lighten-2 waves-effect waves-light" id="addToCart">Add To Cart<i class="material-icons right">add_box</i></button></div>'
+            itemCard +='<i class="material-icons right">more_vert</i></span><button class="btn indigo lighten-2 waves-effect waves-light" id="addToCart" data="'
+            itemCard += data[i].id
+            itemCard += '>Add To Cart<i class="material-icons right">add_box</i></button></div>'
             itemCard += '<div class="card-reveal"><span id="cardTitle" class="card-title grey-text text-darken-4">'    
             itemCard += data[i].name 
             itemCard += '<i class="material-icons right">close</i></span><p id="itemDescription" class="indigo">'
