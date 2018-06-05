@@ -15,6 +15,7 @@ $(document).ready(function(){
         $("#username").text(data.username)
         $("#address").text(address)
         $("#email").text(userEmail)
+        $("#revenue").append(data.balance)
 
         if (data.vendor){
             $("#vendorName").text(data.vendorName)
