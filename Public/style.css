@@ -224,7 +224,7 @@ footer {
 
   /* search page */
 .itemsCard {
-  margin: 2%;
+  /* margin: 2%; */
   background-color: #f5f5f5;
 }
 
@@ -240,12 +240,12 @@ a:visited {
 }
 
 #cardImage {
-    padding: 20px;
+    padding: 10px;
 }
 
-#itemCard {
+/* #itemCard {
     margin: 2%;
-}
+} */
 
 
 /*CHECKOUT PAGE*/
