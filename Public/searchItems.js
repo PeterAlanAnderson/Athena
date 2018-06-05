@@ -1,7 +1,8 @@
 $(document).ready(function(){
     let category = sessionStorage.getItem("category")
-    $.get("/api/items/"+category, function(data) {
-        console.log("ALL ITEMS");
+    console.log(category)
+    $.get("/api/search/"+category, function(data) {
+        console.log("SEARCHED ITEMS");
         console.log(data)
         let cards = ""
         for(var i=0; i < data.length; i++)

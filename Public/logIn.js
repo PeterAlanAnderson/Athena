@@ -86,49 +86,51 @@ $(document).ready(function () {
 //***********************************************************
 //                    HERE THERE BE TEST DATA
 
-    var customers = [];
-    var user1 = {
-      name: "Peter Anderson",
-      email: "peter.alan.anderson@gmail.com",
-      username: "peterName",
-      password: "puppies",
-      vendor: false,
-      storeName: "my store",
-      likedTags: "puppies, puppies, puppies"
-    }
+  //   var customers = [];
+  //   var user1 = {
+  //     name: "Peter Anderson",
+  //     email: "peter.alan.anderson@gmail.com",
+  //     username: "peterName",
+  //     password: "puppies",
+  //     vendor: false,
+  //     storeName: "my store",
+  //     likedTags: "puppies, puppies, puppies"
+  //   }
 
-    var user2 = {
-      name: "Moe Hatab",
-      email: "moe@moe.com",
-      username: "bigmoe",
-      password: "moe",
-      vendor: false,
-      storeName: "ShopMoe",
-      likedTags: "puppies, puppies, puppies"
-    }
+  //   var user2 = {
+  //     name: "Moe Hatab",
+  //     email: "moe@moe.com",
+  //     username: "bigmoe",
+  //     password: "moe",
+  //     vendor: false,
+  //     storeName: "ShopMoe",
+  //     likedTags: "puppies, puppies, puppies"
+  //   }
 
-    var user3 = {
-      name: "Al Gore",
-      email: "algore@government.com",
-      username: "AwesomeAl",
-      password: "excelsior",
-      vendor: false,
-      storeName: "Al Mart",
-      likedTags: "Al Gore"
-    }
+  //   var user3 = {
+  //     name: "Al Gore",
+  //     email: "algore@government.com",
+  //     username: "AwesomeAl",
+  //     password: "excelsior",
+  //     vendor: false,
+  //     storeName: "Al Mart",
+  //     likedTags: "Al Gore"
+  //   }
 
-    function getUsers() {
-      $.get("/api/customers",function(data){
-        customers = data;
-        console.log("got here!")
-        console.log(customers)
-      })
-    }
-    function createUser(NewUser){
-      $.post("/api/customer", NewUser, getUsers);
-    }
-    createUser(user1)
-    // var items = [];
+  //   function getUsers() {
+  //     $.get("/api/customers",function(data){
+  //       customers = data;
+  //       console.log("got here!")
+  //       console.log(customers)
+  //     })
+  //   }
+  //   function createUser(NewUser){
+  //     $.post("/api/customer", NewUser, getUsers);
+  //   }
+  //   createUser(user1)
+  //   createUser(user2)
+  //   createUser(user3)
+  //   var items = [];
   //   var testItem = {
   //       name: "Pizza",
   //       description: "This pizza is a good ol' fashioned pizza for eating yum yum!",
