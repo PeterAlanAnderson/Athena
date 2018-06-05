@@ -8,7 +8,7 @@ $(document).ready(function () {
         localStorageItems.push(JSON.parse(localStorage.getItem('shoppingCart')));
         var cartTotal = 0;
         for (j < 0; j < localStorageItems.length; j++) {
-            
+
             $("#cartItemName").val(localStorageItems[i].name);
             $("#cartItemPrice").val(localStorageItems[i].price);
             cartTotal = +localStorageItems[i].price;
@@ -18,7 +18,7 @@ $(document).ready(function () {
 
     $("#addToCart").on("click", function (event) {
         event.preventDefault();
-        var id = $(this).data("id");
+        var id = $(this).attr("data");
         console.log(id);
 
         $.get("/api/items/" + id, function (items) {
