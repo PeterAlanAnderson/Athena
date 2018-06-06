@@ -124,6 +124,10 @@ footer {
   right: 0;
 }
 
+.footerContact {
+  display: inline;
+}
+
 
   /*input fields*/
 
