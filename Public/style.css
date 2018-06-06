@@ -290,5 +290,21 @@ p#itemDescription {
 }
 
 
+/*shopping cart*/
+
+
+.itemCart {
+  border-bottom: 1px solid;
+}
+
+.cartItemName {
+  font-size: 254%;
+}
+
+.cartItemPrice {
+  font-size: 156%;
+}
+
+
 
 

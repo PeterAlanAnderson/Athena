@@ -19,20 +19,21 @@ $(document).ready(function () {
         console.log(localStorageItems)
         var cartTotal = 0;
         for (var i = 0; i < localStorageItems.length; i++) {
-            var newCartDiv = '<div><img class="imageCart" src="'
+            var newCartDiv = '<div class="itemCart row"><div class="col s7"><img class="imageCart responsive-img" style="width: 30%" src="'
             newCartDiv += localStorageItems[i].imageUrl
-            newCartDiv += '"><ul><li class="cartItemName">'
-            newCartDiv += localStorageItems[i].name
+            newCartDiv += '"></div><div class="col s5"><ul><li class="cartItemName">'
+            newCartDiv += "Item: " + localStorageItems[i].name
             newCartDiv += '</li><li class="cartItemPrice">'
-            newCartDiv += localStorageItems[i].price
-            newCartDiv += '</li>'
+            newCartDiv += "Price: $" + localStorageItems[i].price
+            newCartDiv += '</li></ul>'
+            newCartDiv += '</div>'
             cartTotal += parseInt(localStorageItems[i].price);
             console.log("cart total: " + cartTotal)
             console.log(newCartDiv)
             $("#cartDiv").append(newCartDiv);
         }
         console.log(cartTotal)
-        $("#cartTotal").html(`Your Total: ${cartTotal}`)
+        $("#cartTotal").html(`Your Total: $${cartTotal}`)
     }
 
     checkCart();
