@@ -124,6 +124,10 @@ footer {
   right: 0;
 }
 
+.footerContact {
+  display: inline;
+}
+
 
   /*input fields*/
 
@@ -287,6 +291,23 @@ p#itemDescription {
     display: inline-block;
     text-align: center;
     margin-right: 1rem;
+}
+
+
+/*shopping cart*/
+
+
+.itemCart {
+  border-bottom: 1px solid;
+  padding-bottom: 2%;
+}
+
+.cartItemName {
+  font-size: 254%;
+}
+
+.cartItemPrice {
+  font-size: 156%;
 }
 
 
