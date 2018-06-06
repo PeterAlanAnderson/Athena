@@ -1,6 +1,6 @@
 $(document).ready(function () {
-    console.log("page loaded");
-    console.log("currently logged in as: " + localStorage.getItem("email"));
+    // console.log("page loaded");
+    // console.log("currently logged in as: " + localStorage.getItem("email"));
     var customerData = [];
     var customerUserName;
     var customerID;
@@ -9,8 +9,8 @@ $(document).ready(function () {
     function userData() {
         $.get("/api/customers", function (data) {
             customerData = data;
-            console.log("TESTING FOR USER DATA");
-            console.log(customerData);
+            // console.log("TESTING FOR USER DATA");
+            // console.log(customerData);
 
             for (i = 0; i < customerData.length; i++) {
                 if (customerData[i].email === localStorage.getItem("email")) {
@@ -18,16 +18,16 @@ $(document).ready(function () {
                     customerID = customerData[i].id;
                 }
             }
-            console.log(customerUserName);
-            console.log(customerID);
+            // console.log(customerUserName);
+            // console.log(customerID);
         });
     }
 
-    $("#submit").on("click", function (event) {
+    $("#submitItem").on("click", function (event) {
         event.preventDefault();
         itemName = ($("#itemName").val().trim());
         itemDescription = ($("#itemDescription").val().trim());
-        itemQuantity = ($("#quantity").val().trim());
+        itemQuantity = ($("#itemQuantity").val().trim());
         itemPrice = ($("#price").val().trim());
         itemUrl = ($("#itemPhoto").val().trim());
         // userEmail = localStorage.getItem("email");
@@ -47,16 +47,17 @@ $(document).ready(function () {
            
             owner: customerID
         };
+        console.log(newItem)
 
-        console.log("var newItem = ")
+        // console.log("var newItem = ")
         // console.log(newItem);
 
-        $.post("/api/item", newItem)
-            // on success, run this callback
-            .then(function (data) {
-                console.log(data);
-                itemReset();
-            })
+        // $.post("/api/item", newItem)
+        //     // on success, run this callback
+        //     .then(function (data) {
+        //         console.log(data);
+        //         itemReset();
+        //     })
     });
 
     function itemReset() {

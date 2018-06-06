@@ -66,12 +66,13 @@ module.exports = function (app) {
     })
 
     //get one username
-    app.get("/api/customer/:email", function (req, res) {
+    app.get("/api/customeremail/:email", function (req, res) {
         db.Customer.findOne({
             where: {
                 email: req.params.email
             }
         }).then(function (result) {
+            console.log(result)
             res.json(result)
         })
     })
@@ -95,6 +96,7 @@ module.exports = function (app) {
 
     //POST new item
     app.post("/api/item", function (req, res) {
+        console.log("chirp")
         db.Item.create({
             name: req.body.name,
             description: req.body.description,
