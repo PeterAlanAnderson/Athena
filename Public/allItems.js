@@ -9,7 +9,7 @@ $(document).ready(function(){
         for(var i=0; i < data.length; i++)
         {
             console.log("working on",data[i])
-            let itemCard = '<div class="card medium hoverable col s3" id="itemCard"><div class="card-image waves-effect waves-block waves-light">'
+            let itemCard = '<div class="col s4"><div class="card small hoverable z-depth-4" id="itemCard"><div class="card-image waves-effect waves-block waves-light">'
             itemCard += '<a href="/item"><img class"responsive-img" id="cardImage"src="'
             itemCard += data[i].image
             itemCard += '"></a></div>'
@@ -24,7 +24,7 @@ $(document).ready(function(){
             itemCard += data[i].description
             itemCard += '</p><h6>Price: $'
             itemCard += data[i].price
-            itemCard += '</h6></div></div>'
+            itemCard += '</h6></div></div></div>'
             console.log(itemCard)
 
             $("#itemsContainer").append(itemCard)
