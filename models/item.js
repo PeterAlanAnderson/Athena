@@ -46,7 +46,7 @@ module.exports = (sequelize, DataTypes) => {
         owner: {
             type: DataTypes.INTEGER
         }
-
+    }, { timestamps : false
     });
 
     Item.associate = (models) => {
