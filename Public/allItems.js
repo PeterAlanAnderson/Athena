@@ -48,7 +48,8 @@ $(document).ready(function(){
                     name: data.name,
                     price: data.price,
                     imageUrl: data.image,
-                    owner: data.owner
+                    owner: data.owner,
+                    qty: data.quantity
                 }
                 localStorageItems.push(cartItem);
                 console.log(`cart item: ${cartItem.id}, ${cartItem.name}, ${cartItem.price}, ${cartItem.imageUrl}`)

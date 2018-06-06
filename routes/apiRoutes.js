@@ -54,9 +54,9 @@ module.exports = function (app) {
     })
 
     app.put("/api/customer/:id", function (req, res){
-        db.Customer.findOne({
-            balance: req.body.balance
-        }, {
+        db.Customer.update(
+            req.body,
+        {
             where:{
                 id: req.params.id
             }
@@ -177,9 +177,9 @@ module.exports = function (app) {
 
     //UPDATE item (reduce quantity for sale?)
     app.put("/api/item", function (req, res) {
-        db.Item.update({
-            quantity: req.body.quantity
-        }, {
+        db.Item.update(
+                req.body,
+            {
             where: {
                 id: req.body.id
             }
