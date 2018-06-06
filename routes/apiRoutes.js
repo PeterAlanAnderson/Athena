@@ -42,6 +42,18 @@ module.exports = function (app) {
     //     })
     // })
 
+    app.put("/api/customer/:id", function (req, res){
+        db.Customer.findOne({
+            balance: req.body.balance
+        }, {
+            where:{
+                id: req.params.id
+            }
+        }).then(function(data){
+
+        })
+    })
+
     //get one username
     app.get("/api/customer/:email", function (req, res) {
         db.Customer.findOne({
