@@ -231,10 +231,11 @@ footer {
 
 
   /* search page */
-.itemsCard {
-  /* margin: 2%; */
-  background-color: #f5f5f5;
+.itemCard {
+  margin: 2%;
+  
 }
+
 
 a:link .addInfo {
   color: #9fa8da; 
@@ -251,9 +252,15 @@ a:visited {
     padding: 10px;
 }
 
-/* #itemCard {
-    margin: 2%;
-} */
+.center-cols > .col {
+    float:none; /* disable the float */
+    display: inline-block; /* make blocks inline-block */
+    text-align: initial; /* restore text-align to default */
+  }
+
+#itemCard {
+    margin-right: 5%;
+} 
 
 
 /*CHECKOUT PAGE*/
