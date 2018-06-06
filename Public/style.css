@@ -295,6 +295,7 @@ p#itemDescription {
 
 .itemCart {
   border-bottom: 1px solid;
+  padding-bottom: 2%;
 }
 
 .cartItemName {

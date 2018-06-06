@@ -19,7 +19,7 @@ $(document).ready(function () {
         console.log(localStorageItems)
         var cartTotal = 0;
         for (var i = 0; i < localStorageItems.length; i++) {
-            var newCartDiv = '<div class="itemCart row"><div class="col s7"><img class="imageCart responsive-img" style="width: 30%" src="'
+            var newCartDiv = '<div class="itemCart row"><div class="col s7"><img class="imageCart responsive-img" style="width: 35%" src="'
             newCartDiv += localStorageItems[i].imageUrl
             newCartDiv += '"></div><div class="col s5"><ul><li class="cartItemName">'
             newCartDiv += "Item: " + localStorageItems[i].name
