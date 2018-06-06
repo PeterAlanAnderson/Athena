@@ -23,8 +23,9 @@ h1 {
 }
 
 p {
-	font-family: 'Josefin Sans', sans-serif;
+	/*font-family: 'Josefin Sans', sans-serif;*/
 }
+
 
 i {
   padding-top: -10px;
@@ -262,6 +263,10 @@ a:visited {
 #itemCard {
     margin-right: 5%;
 } 
+
+p#itemDescription {
+  font-size: 100%;
+}
 
 
 /*CHECKOUT PAGE*/
