@@ -6,7 +6,8 @@ module.exports = (sequelize, DataTypes) => {
             primaryKey: true
         },
         purchaseID: {
-            type: DataTypes.UUID
+            type: DataTypes.UUID,
+            defaultValue: DataTypes.UUIDV1
         },
         itemId: {
             type: DataTypes.INTEGER
@@ -15,8 +16,11 @@ module.exports = (sequelize, DataTypes) => {
             type: DataTypes.INTEGER
         },
         date: {
-            type: DataTypes.DATE
+            type: DataTypes.DATE,
+            defaultValue: DataTypes.NOW,
+            allowNull: false
         }
+    }, { timestamps : false
     });
 
     PurchaseLog.associate = (models) => {

@@ -1,7 +1,6 @@
 $(document).ready(function () {
-
+    const localStorageItems = [];
     function checkCart() {
-        let localStorageItems = [];
         console.log(localStorage.shoppingCart)
         var getCart = localStorage.getItem('shoppingCart');
         console.log(getCart);
@@ -32,7 +31,26 @@ $(document).ready(function () {
                 $("#cartDiv").append(newCartDiv);
             }
             console.log(cartTotal)
-            $("#cartTotal").val(cartTotal)
+            $("#cartTotal").html(`Your Total: ${cartTotal}`)
         }
+
 checkCart();
+console.log(localStorageItems)
+
+// Posting a new purchase log********************************************************************************8
+$("#placeOrder").on("click", function (event) {
+    event.preventDefault();
+    for (var i = 0; i < localStorageItems.length; i++) {
+        var cartItemId = localStorageItems[i].id;
+        var newLog = {
+            purchaseId: Date.UTC(),
+            itemId: cartItemId,
+            quantity: 1
+        }
+        $.post("/api/purchaseLog", newLog).then(function (data) {
+            console.log(data);
+            console.log("purchageLog created");
+        }) 
+    }
+})
 });

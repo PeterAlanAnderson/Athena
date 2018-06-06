@@ -6,6 +6,7 @@
 // =============================================================
 var express = require("express");
 var bodyParser = require("body-parser");
+var uuid = require("uuid/v1");
 
 // Sets up the Express App
 // =============================================================

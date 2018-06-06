@@ -39,7 +39,7 @@ module.exports = (sequelize, DataTypes) => {
             type: DataTypes.FLOAT,
             allowNull: false,
         }
-
+    }, { timestamps : false
     });
     // Customer.associate = (models) => {
 
