@@ -20,7 +20,7 @@ $(document).ready(function(){
             itemCard += '">Add To Cart<i class="material-icons right">add_box</i></button></div>'
             itemCard += '<div class="card-reveal"><span id="cardTitle" class="card-title grey-text text-darken-4">'    
             itemCard += data[i].name 
-            itemCard += '<i class="material-icons right">close</i></span><p id="itemDescription" class="indigo">'
+            itemCard += '<i class="material-icons right">close</i></span><p id="itemDescription">'
             itemCard += data[i].description
             itemCard += '</p><h6>Price: $'
             itemCard += data[i].price
