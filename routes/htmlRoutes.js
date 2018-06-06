@@ -37,6 +37,10 @@ module.exports = function(app) {
     res.render("allItems");
   });
 
+  app.get("/searchItems", function(req, res){
+    res.render("searchItems")
+  })
+
   app.get("/createUser", function(req, res) {
     res.render("createUser");
   });
