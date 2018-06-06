@@ -171,6 +171,58 @@ $(document).ready(function () {
   //       tags: "bike, transportation, outdoors, exercise",
   //       owner: 1
   //   };
+  //   var testItem4 = {
+  //      name: "Crunchy Logs",
+  //      description: "Kellog's cereal box from 1978, unopened.",
+  //      quantity: 1,
+  //      auction: false,
+  //      price: 44,
+  //      image:"https://i.pinimg.com/736x/7d/7f/e3/7d7fe3d2b47ef2ad4d795ef5ff1204fe--school-breakfast-breakfast-cereal.jpg",
+  //      category: "food",
+  //      featured: true,
+  //      totalSold: 0,
+  //      tags: "food, antiques",
+  //      owner: 2
+  //  };
+  //  var testItem5 = {
+  //      name: "Retro Pepsi Bottles",
+  //      description: "Set of 3 replica pepsi bottles from the 1980's.  Limited Edition. Unopened",
+  //      quantity: 1,
+  //      auction: false,
+  //      price: 18,
+  //      image: "https://ssli.ebayimg.com/images/g/LUUAAOSwHnFVtZ7g/s-l640.jpg",
+  //      category: "food",
+  //      featured: true,
+  //      totalSold: 1,
+  //      tags: "food, soda, antique",
+  //      owner: 1
+  //  };
+  // var testItem6 = {
+  //      name: "Hammock",
+  //      description: "It's like a net in a tree you sleep in!",
+  //      quantity: 1,
+  //      auction: false,
+  //      price: 40,
+  //      image: "https://thediylighthouse.com/wp-content/uploads/2016/05/Screen-Shot-2018-01-30-at-11.03.11-AM.png",
+  //      category: "outdoors",
+  //      featured: true,
+  //      totalSold: 1,
+  //      tags: "net, outdoors, tree, fun, sleep",
+  //      owner: 1
+  //  };
+  // var testItem7 = {
+  //     name: "Alien Chestburster Costume Prop",
+  //     description: "Custom Alien chestburster for use in a costume.  3D printed.",
+  //     quantity: 1,
+  //     auction: false,
+  //     price: 34,
+  //     image: "https://img.etsystatic.com/il/6ad128/956387466/il_570xN.956387466_d56c.jpg?version=0",
+  //     category: "clothing",
+  //     featured: true,
+  //     totalSold: 1,
+  //     tags: "clothing, costume",
+  //     owner: 1
+  // };
 
   //   function getItems(){
   //       $.get("/api/items", function (data){
@@ -185,5 +237,9 @@ $(document).ready(function () {
   //  createItem(testItem);
   //  createItem(testItem2);
   //  createItem(testItem3);
+  //  createItem(testItem4);
+  //  createItem(testItem5);
+  //  createItem(testItem6);
+  //  createItem(testItem7);
 
 });
