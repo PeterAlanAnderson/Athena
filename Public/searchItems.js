@@ -1,5 +1,6 @@
 $(document).ready(function(){
     let category = sessionStorage.getItem("category")
+    let localStorageItems = []
     console.log(category)
     $.get("/api/search/"+category, function(data) {
         console.log("SEARCHED ITEMS");
@@ -37,6 +38,7 @@ $(document).ready(function(){
     }).then(function(){
         $(".addToCart").on("click", function (event) {
             event.preventDefault();
+            
             var id = $(this).attr("data");
             console.log(id);
     
