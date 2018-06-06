@@ -65,13 +65,24 @@ $(document).ready(function () {
         } else {
         let i = items.pop()
         console.log(items)
-        $.get("/api/customer/"+i.owner).then(function(data){
-            let newBalance = parseInt(data.balance) + parseInt(i.price)
-            $.ajax({
-                method: "PUT",
-                url: "/api/customer/"+i.owner,
-                data: {balance : newBalance}    
-            }).then(function(data){buyItems(items)})
+        $.get("/api/customer/"+i.owner).then(function(custData){
+            $.get("/api/items/"+i.id).then(function(itemData){
+                let newQuantity = parseInt(itemData.quantity) - 1
+                let newBalance = parseInt(custData.balance) + parseInt(i.price)
+                $.ajax({
+                    method:"PUT",
+                    url: "/api/item/"+i.id,
+                    data: {quantity : newQuantity}
+                }).then(function(data){
+                    $.ajax({
+                        method: "PUT",
+                        url: "/api/customer/"+i.owner,
+                        data: {balance : newBalance}    
+                    }).then(function(data){buyItems(items)})
+                })
+            })
+            
+            
         })
         return
         }

@@ -176,12 +176,12 @@ module.exports = function (app) {
     // app.get()
 
     //UPDATE item (reduce quantity for sale?)
-    app.put("/api/item", function (req, res) {
+    app.put("/api/item/:id", function (req, res) {
         db.Item.update(
                 req.body,
             {
             where: {
-                id: req.body.id
+                id: req.params.id
             }
         }).then(function (result) {
             res.json(result)
