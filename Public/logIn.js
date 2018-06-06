@@ -117,6 +117,7 @@ $(document).ready(function () {
   //     likedTags: "Al Gore"
   //   }
 
+
   //   function getUsers() {
   //     $.get("/api/customers",function(data){
   //       customers = data;

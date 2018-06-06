@@ -1,4 +1,7 @@
 $(document).ready(function(){
+    var itemQuant;
+    var oldQuant;
+    const localStorageItems = [];
     $.get("/api/items", function(data) {
         console.log("ALL ITEMS");
         console.log(data)
@@ -12,7 +15,7 @@ $(document).ready(function(){
             itemCard += '"></a></div>'
             itemCard += '<div class="card-content"><span class="card-title activator grey-text text-darken-4">'
             itemCard += data[i].name 
-            itemCard +='<i class="material-icons right">more_vert</i></span><button class="btn indigo lighten-2 waves-effect waves-light" id="addToCart" data="'
+            itemCard +='<i class="material-icons right">more_vert</i></span><button class="btn indigo lighten-2 waves-effect waves-light addToCart" data="'
             itemCard += data[i].id
             itemCard += '">Add To Cart<i class="material-icons right">add_box</i></button></div>'
             itemCard += '<div class="card-reveal"><span id="cardTitle" class="card-title grey-text text-darken-4">'    
@@ -33,47 +36,60 @@ $(document).ready(function(){
         }
         
     }).then(function(){
-        $("#addToCart").on("click", function (event) {
+        $(".addToCart").on("click", function (event) {
             event.preventDefault();
             var id = $(this).attr("data");
             console.log(id);
     
-            $.get("/api/items/" + id, function (items) {
-                console.log(items);
-                localStorageItems.push(items);
-                console.log(localStorageItems);
+            $.get("/api/items/" + id, function (data) {
+                console.log(data);
+                var cartItem = {
+                    id: data.id,
+                    name: data.name,
+                    price: data.price,
+                    imageUrl: data.image,
+                    owner: data.owner
+                }
+                localStorageItems.push(cartItem);
+                console.log(`cart item: ${cartItem.id}, ${cartItem.name}, ${cartItem.price}, ${cartItem.imageUrl}`)
+                console.log(`local storage array: ${localStorageItems}`);
                 var stringifiedArray = [];
     
                 function stringify() {
                     for (let i = 0; i < localStorageItems.length; i++) {
                         stringifiedArray.push(JSON.stringify(localStorageItems[i]));
+                        console.log(`stringified array : ${stringifiedArray}`)
+                        localStorage.setItem('shoppingCart', stringifiedArray);
+                        console.log("local storage: " + localStorage.shoppingCart)
                     }
-                    localStorage.setItem('shoppingCart', stringifiedArray);
+                    
                 };
+                stringify();
     
                 // res.render("main", items);
-                checkCart();
+                // checkCart();
             })
         });
     });
-    function checkCart() {
-        localStorageItems.push(JSON.parse(localStorage.getItem('shoppingCart')));
-        var cartTotal = 0;
-        if(localStorageItems.length = 0 ){
-            console.log("cart is empty")
-        }else {
-        for (let i = 0; i < localStorageItems.length; i++) {
-            var newCartDiv = $("<div id='listDiv'><img id='imageCart' src=''><ul><li id='cartItemName'><li id='cartItemPrice'>");
-            $('#imageCart').attr("src", localStorageItems[i].image)
-            $("#cartItemName").html(localStorageItems[i].name);
-            $("#cartItemPrice").html(localStorageItems[i].price);
-            cartTotal = +localStorageItems[i].price;
-            $("#cartDiv").append(newCartDiv);
-        }
-        $("#cartTotal").html(cartTotal)
-        console.log(cartTotal)
-    }
-    checkCart();
-    }
+//     function checkCart() {
+//         var parsedStorage = JSON.parse(localStorage.getItem('shoppingCart'))
+//         localStorageItems.push(parsedStorage);
+//         var cartTotal = 0;
+//         if(localStorageItems.length = 0 ){
+//             console.log("cart is empty")
+//         }else {
+//         for (let i = 0; i < localStorageItems.length; i++) {
+//             var newCartDiv = $("<div id='listDiv'><img id='imageCart' src=''><ul><li id='cartItemName'></li><li id='cartItemPrice'></li></ul></div>");
+//             $('#imageCart').attr("src", localStorageItems[i].imageUrl)
+//             $("#cartItemName").html(localStorageItems[i].name);
+//             $("#cartItemPrice").html(localStorageItems[i].price);
+//             cartTotal = +localStorageItems[i].price;
+//             $("#cartDiv").append(newCartDiv);
+//         }
+//         $("#cartTotal").html(cartTotal)
+//         // console.log(cartTotal)
+//     }
+// }
+// checkCart();
     
 });
