@@ -36,7 +36,7 @@ $(document).ready(function () {
     }
 
     checkCart();
-    console.log(localStorageItems)
+    console.log("LSI:" +localStorageItems)
 
     // Posting a new purchase log********************************************************************************8
     $("#placeOrder").on("click", function (event) {
@@ -54,31 +54,70 @@ $(document).ready(function () {
             })
         }
 
-        var originalBalance;
-        for (var j = 0; j < localStorageItems.length; j++) {
-            var originalBalance;
-            var storedItemId = parseInt(localStorageItems[j].id);
-            var storedCustomerId = parseInt(localStorageItems[j].owner);
-            var storedItemPrice = parseInt(localStorageItems[j].price);
-            console.log(storedCustomerId, storedItemId, storedItemPrice)
-            $.get("/api/customer/" + storedCustomerId).then(function (data) {
-                // originalBalance = data.balance;
-                console.log('data:' + data)
-                originalBalance = data.balance
-                console.log("original balance" + originalBalance);
-                updateBalance();
+        let originalBalance = 0;
+        let itemsToBuy = localStorageItems
+        buyItems(itemsToBuy)
+    })
+
+    function buyItems(items){
+        if(items.length<1){
+            return
+        } else {
+        let i = items.pop()
+        console.log(items)
+        $.get("/api/customer/"+i.owner).then(function(custData){
+            $.get("/api/items/"+i.id).then(function(itemData){
+                let newQuantity = parseInt(itemData.quantity) - 1
+                let newBalance = parseInt(custData.balance) + parseInt(i.price)
+                $.ajax({
+                    method:"PUT",
+                    url: "/api/item/"+i.id,
+                    data: {quantity : newQuantity}
+                }).then(function(data){
+                    $.ajax({
+                        method: "PUT",
+                        url: "/api/customer/"+i.owner,
+                        data: {balance : newBalance}    
+                    }).then(function(data){buyItems(items)})
+                })
             })
             
-            var newBalance = originalBalance + storedItemPrice
-            function updateBalance() {
-                $.ajax({
-                    method: "PUT",
-                    url: "/api/customer/" + storedCustomerId,
-                    data: {balance : newBalance}
-                }).then(console.log("balance updated"))
-            }
             
+        })
+        return
         }
-    });
+    
+    }
+
+
+
+        // for (let j = 0; j < localStorageItems.length; j++) {
+        //     console.log("looping")
+        //     // let originalBalance = 0;
+        //     let storedItemId = parseInt(localStorageItems[j].id);
+        //     let storedCustomerId = parseInt(localStorageItems[j].owner);
+        //     let storedItemPrice = parseInt(localStorageItems[j].price);
+        //     console.log(storedCustomerId, storedItemId, storedItemPrice)
+        //     $.get("/api/customer/" + storedCustomerId).then(function (data) {
+        //         originalBalance = data.balance
+        //         console.log("original balance" + originalBalance);
+        //         let newBalance = originalBalance + storedItemPrice
+        //         updateBalance(storedCustomerId, newBalance);
+        //     })
+            
+            
+
+            
+        // }
+    // });
+
+    function updateBalance(ID, newBalance) {
+        // console.log(newBalance)
+        $.ajax({
+            method: "PUT",
+            url: "/api/customer/" + ID,
+            data: {balance : newBalance}
+        }).then(console.log("balance updated"))
+    }
 
 });
