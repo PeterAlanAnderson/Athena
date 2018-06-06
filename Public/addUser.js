@@ -23,6 +23,13 @@ $(document).ready(function () {
     }
 
 
+ $("#password, #password_confirm").on("keyup", function () {
+        if ($("#customerPassword").val() == $("#password_confirm").val()) {
+            $("#password_message").html("Password Matching").css("color", "green");
+        } else 
+            $("#password_message").html("Password Not Matching").css("color", "red")
+    });
+
 
 
     $("#submitUserInfo").on("click" ,function (event) {
