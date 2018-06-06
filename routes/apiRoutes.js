@@ -107,7 +107,7 @@ module.exports = function (app) {
         })
     })
     
-    app.get("/api/items/:category", function (req, res) {
+    app.get("/api/search/:category", function (req, res) {
 
         db.Item.findAll({
             where: {
