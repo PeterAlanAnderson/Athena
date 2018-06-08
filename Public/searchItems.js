@@ -9,7 +9,7 @@ $(document).ready(function(){
         for(var i=0; i < data.length; i++)
         {
             console.log("working on",data[i])
-            let itemCard = '<div class="card small medium hoverable col s4" id="itemCard"><div class="card-image waves-effect waves-block waves-light">'
+            let itemCard = '<div class="col s4"><div class="card small hoverable z-depth-1" id="itemCard"><div class="card-image waves-effect waves-block waves-light">'
             itemCard += '<a href="/item"><img class"responsive-img" id="cardImage"src="'
             itemCard += data[i].image
             itemCard += '"></a></div>'
@@ -17,14 +17,14 @@ $(document).ready(function(){
             itemCard += data[i].name 
             itemCard +='<i class="material-icons right">more_vert</i></span><button class="btn indigo lighten-2 waves-effect waves-light addToCart" data="'
             itemCard += data[i].id
-            itemCard += '>Add To Cart<i class="material-icons right">add_box</i></button></div>'
+            itemCard += '">Add To Cart<i class="material-icons right">add_box</i></button></div>'
             itemCard += '<div class="card-reveal"><span id="cardTitle" class="card-title grey-text text-darken-4">'    
             itemCard += data[i].name 
-            itemCard += '<i class="material-icons right">close</i></span><p id="itemDescription" class="indigo">'
+            itemCard += '<i class="material-icons right">close</i></span><p id="itemDescription">'
             itemCard += data[i].description
             itemCard += '</p><h6>Price: $'
             itemCard += data[i].price
-            itemCard += '</h6></div></div>'
+            itemCard += '</h6></div></div></div>'
             console.log(itemCard)
 
             $("#itemsContainer").append(itemCard)
