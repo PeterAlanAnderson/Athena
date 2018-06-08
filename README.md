@@ -8,14 +8,14 @@ A wiese place to shop!
 
 ####  Node Packages 
 	
-	"body-parser": "^1.18.3",
-    "express": "^4.16.3",
-    "express-handlebars": "^3.0.0",
-    "handlebars": "^4.0.11",
-    "mysql": "^2.15.0",
-    "mysql2": "^1.5.3",
-    "path": "^0.12.7",
-    "sequelize": "^4.37.10"
+	* body-parser 
+    * express: 
+    * express-handlebars
+    * handlebars
+    * mysql
+    * mysql2
+    * path
+    * sequelize
 	
 #### Create Database
 	Use Schema provided in file to create databse locally
