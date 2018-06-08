@@ -1,6 +1,6 @@
 # Athena
 
-A wiese place to shop! 
+A wise place to shop! A mock online shopping experience where customers can list items to sell and purchase items from other vendors. Athena creates a smooth and easy shopping experience. A project created for the University of Minnesota's Coding Bootcamp
 
 ## Getting Started: 
 
@@ -18,7 +18,7 @@ A wiese place to shop!
     * sequelize
 	
 #### Create Database
-	Use Schema provided in file to create databse locally
+	Use Schema provided in file to create database locally
 
 
 
@@ -39,10 +39,10 @@ https://sheltered-tundra-88443.herokuapp.com/
 
 * **Lucas Jensen** - *Project Manager, Frontend Development, UI Design* - [github](https://github.com/Lucasjensen56)
 
-* **Peter Anderson** [github](https://github.com/PeterAlanAnderson)
+* **Peter Anderson** - *Backend Development* - [github](https://github.com/PeterAlanAnderson)
 
-* **Oliva** [github](https://github.com/livg7046)
+* **Oliva** - *Frontend Development, UI Design* - [github](https://github.com/livg7046)
 
-* **Moe Hatab**[github](https://github.com/hatab002)
+* **Moe Hatab** - *Backend Development* - [github](https://github.com/hatab002)
 
-* **Ben Tommerdahl** [github](https://github.com/btommer2017)
+* **Ben Tommerdahl** *Backend Development* - [github](https://github.com/btommer2017)
